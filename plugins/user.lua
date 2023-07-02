@@ -16,5 +16,13 @@ return {
     config = function()
       require("nvim-surround").setup({})
     end
+  },
+  {
+    "phaazon/hop.nvim",
+    branch = "v2",
+    event = "VeryLazy",
+    config = function()
+      require 'hop'.setup()
+    end
   }
 }
