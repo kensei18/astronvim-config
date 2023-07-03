@@ -24,5 +24,13 @@ return {
     config = function()
       require 'hop'.setup()
     end
+  },
+  {
+    "TimUntersberger/neogit",
+    dependencies = "nvim-lua/plenary.nvim",
+    event = "VeryLazy",
+    config = function()
+      require('neogit').setup({})
+    end
   }
 }
