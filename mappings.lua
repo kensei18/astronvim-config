@@ -25,7 +25,7 @@ return {
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
     ["<leader>s"] = { ":HopPattern<cr>", desc = "Go to word" },
-    ["<leader>gP"] = { ":Neogit pull<cr>", desc = "Pull popup" }
+    ["<leader>gn"] = { ":Neogit<cr>", desc = "Neogit popup" }
   },
   t = {
     -- setting a mapping to false will disable it
