@@ -26,7 +26,7 @@ return {
     end
   },
   {
-    "TimUntersberger/neogit",
+    "NeogitOrg/neogit",
     dependencies = "nvim-lua/plenary.nvim",
     event = "VeryLazy",
     config = function()
@@ -38,7 +38,7 @@ return {
   {
     "iamcco/markdown-preview.nvim",
     event = "VeryLazy",
-    config = function ()
+    config = function()
       vim.fn["mkdp#util#install"]()
     end
   }
