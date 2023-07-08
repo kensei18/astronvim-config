@@ -25,7 +25,7 @@ return {
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
     ["<leader>s"] = { ":HopPattern<cr>", desc = "Go to word" },
-    ["<leader>gn"] = { ":Neogit<cr>", desc = "Neogit popup" },
+    ["<leader>gg"] = { ":Neogit<cr>", desc = "Neogit popup" },
     ["<leader>lM"] = { desc = "Markdown" },
     ["<leader>lMp"] = { ":MarkdownPreview<cr>", desc = "Markdown Preview" },
     ["<leader>lMs"] = { ":MarkdownPreviewStop<cr>", desc = "Stop Markdown Preview" },
