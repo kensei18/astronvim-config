@@ -29,6 +29,20 @@ return {
     ["<leader>lM"] = { desc = "Markdown" },
     ["<leader>lMp"] = { ":MarkdownPreview<cr>", desc = "Markdown Preview" },
     ["<leader>lMs"] = { ":MarkdownPreviewStop<cr>", desc = "Stop Markdown Preview" },
+    ["<leader>+"] = {
+      function()
+        FontSize = FontSize + 1
+        vim.opt.guifont = { FontName, ":h" .. FontSize }
+        print('increment')
+      end,
+      desc = "Increment Font Size" },
+    ["<leader>-"] = {
+      function()
+        FontSize = FontSize - 1
+        vim.opt.guifont = { FontName, ":h" .. FontSize }
+        print('decrement')
+      end,
+      desc = "Decrement Font Size" },
   },
   t = {
     -- setting a mapping to false will disable it

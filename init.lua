@@ -1,3 +1,6 @@
+FontName = "JetBrainsMono Nerd Font"
+FontSize = 11
+
 return {
   -- Configure AstroNvim updates
   updater = {
@@ -81,5 +84,6 @@ return {
     --     ["~/%.config/foo/.*"] = "fooscript",
     --   },
     -- }
+    vim.opt.guifont = { FontName, ":h" .. FontSize }
   end,
 }
