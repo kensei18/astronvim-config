@@ -85,5 +85,8 @@ return {
     --   },
     -- }
     vim.opt.guifont = { FontName, ":h" .. FontSize }
+
+    vim.opt.spell = true
+    vim.opt.spelloptions = { "camel" }
   end,
 }
