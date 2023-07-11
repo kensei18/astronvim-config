@@ -37,6 +37,7 @@ return {
     ["<leader>b"] = { name = "Buffers" },
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
+    ["<leader>lL"] = { ":LspRestart", desc = "Restart LSP" },
     ["<leader>s"] = { ":HopPattern<cr>", desc = "Go to word" },
     ["<leader>lM"] = { desc = "Markdown" },
     ["<leader>lMp"] = { ":MarkdownPreview<cr>", desc = "Markdown Preview" },
