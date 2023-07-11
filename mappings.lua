@@ -43,7 +43,9 @@ return {
     ["<leader>lMs"] = { ":MarkdownPreviewStop<cr>", desc = "Stop Markdown Preview" },
     ["<leader>+"] = { incrementFontSize, desc = "Increment Font Size" },
     ["<leader>-"] = { decrementFontSize, desc = "Decrement Font Size" },
-    ["<leader>fT"] = { ":TodoTelescope<cr>", desc = "Find TODO" }
+    ["<leader>fT"] = { ":TodoTelescope<cr>", desc = "Find TODO" },
+    ["]T"] = { require('todo-comments').jump_next, desc = "Next TODO" },
+    ["[T"] = { require('todo-comments').jump_prev, desc = "Previous TODO" },
   },
   t = {
     -- setting a mapping to false will disable it
