@@ -1,5 +1,5 @@
 FontName = "JetBrainsMono Nerd Font"
-FontSize = 10
+FontSize = 11
 
 return {
   -- Configure AstroNvim updates
