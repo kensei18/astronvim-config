@@ -88,5 +88,6 @@ return {
 
     vim.opt.spell = true
     vim.opt.spelloptions = { "camel" }
+    vim.opt.spelllang = "en,cjk"
   end,
 }
