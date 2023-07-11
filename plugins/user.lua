@@ -48,5 +48,25 @@ return {
     config = function()
       require('octo').setup()
     end
+  },
+  {
+    "nvim-neotest/neotest",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "nvim-treesitter/nvim-treesitter",
+      "antoinemadec/FixCursorHold.nvim",
+      "nvim-neotest/neotest-go",
+    },
+    event = "VeryLazy",
+    config = function()
+      require('neotest').setup({
+        adapters = {
+          require("neotest-go")({
+            -- run test without cache every time
+            args = { "-count=1" }
+          }),
+        }
+      })
+    end
   }
 }
