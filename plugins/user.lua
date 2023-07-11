@@ -41,5 +41,11 @@ return {
     config = function()
       vim.fn["mkdp#util#install"]()
     end
+  },
+  {
+    "folke/todo-comments.nvim",
+    dependencies = { "nvim-lua/plenary.nvim" },
+    event = "VeryLazy",
+    opts = {}
   }
 }
