@@ -7,20 +7,17 @@
 local function incrementFontSize()
   FontSize = FontSize + 1
   vim.opt.guifont = { FontName, ":h" .. FontSize }
-  print('increment')
 end
 
 local function decrementFontSize()
   FontSize = FontSize - 1
   vim.opt.guifont = { FontName, ":h" .. FontSize }
-  print('decrement')
 end
 
 return {
   -- first key is the mode
   n = {
-    -- second key is the lefthand side of the map
-    -- mappings seen under group name "Buffer"
+    -- buffer
     ["<leader>bn"] = { "<cmd>tabnew<cr>", desc = "New tab" },
     ["<leader>bD"] = {
       function()
@@ -33,14 +30,17 @@ return {
       desc = "Pick to close",
     },
     ["<leader>b"] = { name = "Buffers" },
-    ["<C-s>"] = { ":w!<cr>", desc = "Save File" },
-    ["<leader>lL"] = { ":LspRestart", desc = "Restart LSP" },
+    -- font size
+    ["<leader>+"] = { incrementFontSize, desc = "Increment Font Size" },
+    ["<leader>-"] = { decrementFontSize, desc = "Decrement Font Size" },
+    -- easy motion
     ["<leader>s"] = { ":HopPattern<cr>", desc = "Go to word" },
+    -- LSP
+    ["<leader>lL"] = { ":LspRestart", desc = "Restart LSP" },
     ["<leader>lM"] = { desc = "Markdown" },
     ["<leader>lMp"] = { ":MarkdownPreview<cr>", desc = "Markdown Preview" },
     ["<leader>lMs"] = { ":MarkdownPreviewStop<cr>", desc = "Stop Markdown Preview" },
-    ["<leader>+"] = { incrementFontSize, desc = "Increment Font Size" },
-    ["<leader>-"] = { decrementFontSize, desc = "Decrement Font Size" },
+    -- todo-comments
     ["<leader>fT"] = { ":TodoTelescope<cr>", desc = "Find TODO" },
     ["]T"] = { require('todo-comments').jump_next, desc = "Next TODO" },
     ["[T"] = { require('todo-comments').jump_prev, desc = "Previous TODO" },
