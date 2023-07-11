@@ -1,9 +1,9 @@
 return {
   {
-    "ray-x/lsp_signature.nvim",
+    "folke/neodev.nvim",
     event = "VeryLazy",
     config = function()
-      require("lsp_signature").setup()
+      require("neodev").setup()
     end,
   },
   {
