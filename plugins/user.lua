@@ -25,21 +25,21 @@ return {
       require 'hop'.setup()
     end
   },
-  {
-    "NeogitOrg/neogit",
-    dependencies = {
-      "nvim-lua/plenary.nvim",
-      "sindrets/diffview.nvim"
-    },
-    event = "VeryLazy",
-    config = function()
-      require('neogit').setup({
-        integrations = {
-          diffview = true
-        }
-      })
-    end
-  },
+  -- {
+  --   "NeogitOrg/neogit",
+  --   dependencies = {
+  --     "nvim-lua/plenary.nvim",
+  --     "sindrets/diffview.nvim"
+  --   },
+  --   event = "VeryLazy",
+  --   config = function()
+  --     require('neogit').setup({
+  --       integrations = {
+  --         diffview = true
+  --       }
+  --     })
+  --   end
+  -- },
   {
     "iamcco/markdown-preview.nvim",
     event = "VeryLazy",
