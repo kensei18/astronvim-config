@@ -84,6 +84,8 @@ return {
     --     ["~/%.config/foo/.*"] = "fooscript",
     --   },
     -- }
+    vim.cmd('language en_US')
+
     vim.opt.guifont = { FontName, ":h" .. FontSize }
 
     vim.opt.spell = true
