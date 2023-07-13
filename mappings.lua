@@ -17,6 +17,9 @@ end
 return {
   -- first key is the mode
   n = {
+    -- Leader * 2
+    ["<leader><leader>"] = { name = "Next Menu" },
+
     -- buffer
     ["<leader>bn"] = { "<cmd>tabnew<cr>", desc = "New tab" },
     ["<leader>bD"] = {
@@ -30,20 +33,36 @@ return {
       desc = "Pick to close",
     },
     ["<leader>b"] = { name = "Buffers" },
+
     -- font size
     ["<leader>+"] = { incrementFontSize, desc = "Increment Font Size" },
     ["<leader>-"] = { decrementFontSize, desc = "Decrement Font Size" },
+
     -- easy motion
     ["<leader>s"] = { ":HopPattern<cr>", desc = "Go to word" },
+
     -- LSP
     ["<leader>lL"] = { ":LspRestart", desc = "Restart LSP" },
     ["<leader>lM"] = { desc = "Markdown" },
     ["<leader>lMp"] = { ":MarkdownPreview<cr>", desc = "Markdown Preview" },
     ["<leader>lMs"] = { ":MarkdownPreviewStop<cr>", desc = "Stop Markdown Preview" },
+
     -- todo-comments
     ["<leader>fT"] = { ":TodoTelescope<cr>", desc = "Find TODO" },
-    ["]T"] = { require('todo-comments').jump_next, desc = "Next TODO" },
-    ["[T"] = { require('todo-comments').jump_prev, desc = "Previous TODO" },
+    ["]o"] = { require('todo-comments').jump_next, desc = "Next TODO" },
+    ["[o"] = { require('todo-comments').jump_prev, desc = "Previous TODO" },
+
+    -- neotest
+    ["<leader><leader>t"] = { name = "Test" },
+    ["<leader><leader>ts"] = { require("neotest").summary.toggle, desc = "Test summary" },
+    ["<leader><leader>tt"] = {
+      function()
+        require("neotest").run.run()
+        require("neotest").summary.open()
+      end,
+      desc = "Run nearest test"
+    },
+
     -- Github
     ["<leader>G"] = { name = " Github" },
     ["<leader>Gh"] = { name = "HELP" },
