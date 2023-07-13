@@ -63,6 +63,12 @@ return {
       desc = "Run nearest test"
     },
 
+    -- refactoring
+    ["<leader><leader>r"] = { name = 'Refactoring' },
+    ["<leader><leader>ri"] = { ":Refactor inline_var<cr>", desc = 'Inline var' },
+    ["<leader><leader>rb"] = { ":Refactor extract_block ", desc = 'Extract block' },
+    ["<leader><leader>rf"] = { ":Refactor extract_block_to_file ", desc = 'Extract block to file' },
+
     -- Github
     ["<leader>G"] = { name = " Github" },
     ["<leader>Gh"] = { name = "HELP" },
@@ -79,6 +85,16 @@ return {
     -- ["<leader>Gpc"] = { ":Octo pr create<cr>", desc = "Create" },
     -- ["<leader>GpC"] = { ":Octo pr close<cr>", desc = "Close" },
     -- ["<leader>Gpl"] = { ":Octo pr list<cr>", desc = "List" },
+  },
+  x = {
+    ["<leader><leader>"] = { name = "Next Menu" },
+
+    -- refactoring
+    ["<leader><leader>r"] = { name = 'Refactoring' },
+    ["<leader><leader>ri"] = { ":Refactor inline_var<cr>", desc = 'Inline var' },
+    ["<leader><leader>re"] = { ":Refactor extract ", desc = 'Extract' },
+    ["<leader><leader>rv"] = { ":Refactor extract_var ", desc = 'Extract var' },
+    ["<leader><leader>rf"] = { ":Refactor extract_to_file ", desc = 'Extract to file' },
   },
   t = {
     -- setting a mapping to false will disable it
