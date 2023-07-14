@@ -1,6 +1,3 @@
-FontName = "JetBrainsMono Nerd Font"
-FontSize = 11
-
 return {
   -- Configure AstroNvim updates
   updater = {
@@ -86,15 +83,15 @@ return {
     -- }
     vim.cmd('language en_US')
 
-    vim.opt.guifont = { FontName, ":h" .. FontSize }
-
-    vim.opt.spell = true
-    vim.opt.spelloptions = { "camel" }
-    vim.opt.spelllang = "en,cjk"
-
     vim.api.nvim_set_keymap('', '<D-v>', '+p<CR>', { noremap = true, silent = true })
     vim.api.nvim_set_keymap('!', '<D-v>', '<C-R>+', { noremap = true, silent = true })
     vim.api.nvim_set_keymap('t', '<D-v>', '<C-R>+', { noremap = true, silent = true })
     vim.api.nvim_set_keymap('v', '<D-v>', '<C-R>+', { noremap = true, silent = true })
+
+    -- for autoread
+    vim.api.nvim_create_autocmd({ "BufEnter", "CursorHold", "CursorHoldI", "FocusGained" }, {
+      command = "if mode() != 'c' | checktime | endif",
+      pattern = { "*" },
+    })
   end,
 }
