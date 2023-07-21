@@ -81,7 +81,7 @@ return {
     --     ["~/%.config/foo/.*"] = "fooscript",
     --   },
     -- }
-    vim.cmd('language en_US')
+    vim.cmd('language en_US.UTF-8')
 
     vim.api.nvim_set_keymap('', '<D-v>', '+p<CR>', { noremap = true, silent = true })
     vim.api.nvim_set_keymap('!', '<D-v>', '<C-R>+', { noremap = true, silent = true })
