@@ -68,6 +68,7 @@ return {
   {
     "max397574/colortils.nvim",
     cmd = "Colortils",
+    event = "VeryLazy",
     config = function() require("colortils").setup {} end,
   },
 }
