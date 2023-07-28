@@ -33,7 +33,7 @@ return {
     ["<leader>b"] = { name = "Buffers" },
 
     -- sessions
-    ["<leader><leader>s"] = { ":SessionManager load_session<cr>", desc = "Load a session" },
+    ["<leader>r"] = { ":SessionManager load_session<cr>", desc = "Load a session" },
 
     -- font size
     ["<leader>+"] = { incrementFontSize, desc = "Increment Font Size" },
