@@ -2,7 +2,31 @@ return {
   {
     "leoluz/nvim-dap-go",
     event = "User AstroFile",
-    config = function() require("dap-go").setup {} end,
+    config = function()
+      require("dap-go").setup {
+        delve = {
+          path = "dlv",
+          initialize_timeout_sec = 20,
+          port = 2345,
+          args = {},
+          build_flags = "",
+        },
+        dap_configurations = {
+          {
+            type = "go",
+            name = "Remote Attach",
+            request = "attach",
+            mode = "remote",
+            substitutepath = {
+              {
+                from = "${workspaceFolder}",
+                to = "${env:REMOTE_DEBUG_PATH}",
+              },
+            },
+          },
+        },
+      }
+    end,
   },
   {
     "mxsdev/nvim-dap-vscode-js",
