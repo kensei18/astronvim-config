@@ -2,6 +2,9 @@ local commonSettings = {
   format = {
     insertSpaceAfterOpeningAndBeforeClosingEmptyBraces = false,
   },
+  preferences = {
+    importModuleSpecifier = "non-relative",
+  },
   inlayHints = {
     includeInlayEnumMemberValueHints = true,
     includeInlayFunctionLikeReturnTypeHints = true,
