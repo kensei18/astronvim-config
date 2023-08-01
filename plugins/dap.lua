@@ -70,6 +70,7 @@ return {
             runtimeArgs = {
               "./node_modules/jest/bin/jest.js",
               "--runInBand",
+              "${relativeFile}",
             },
             rootPath = "${workspaceFolder}",
             cwd = "${workspaceFolder}",
