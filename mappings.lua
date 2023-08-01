@@ -43,7 +43,7 @@ return {
     ["<leader>s"] = { ":HopPattern<cr>", desc = "Go to word" },
 
     -- LSP
-    ["<leader>lL"] = { ":LspRestart", desc = "Restart LSP" },
+    ["<leader>lL"] = { ":LspRestart<cr>", desc = "Restart LSP" },
     ["<leader>lM"] = { desc = "Markdown" },
     ["<leader>lMp"] = { ":MarkdownPreview<cr>", desc = "Markdown Preview" },
     ["<leader>lMs"] = { ":MarkdownPreviewStop<cr>", desc = "Stop Markdown Preview" },
