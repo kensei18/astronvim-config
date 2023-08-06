@@ -44,9 +44,6 @@ return {
 
     -- LSP
     ["<leader>lL"] = { ":LspRestart<cr>", desc = "Restart LSP" },
-    ["<leader>lM"] = { desc = "Markdown" },
-    ["<leader>lMp"] = { ":MarkdownPreview<cr>", desc = "Markdown Preview" },
-    ["<leader>lMs"] = { ":MarkdownPreviewStop<cr>", desc = "Stop Markdown Preview" },
 
     -- todo-comments
     ["<leader>fT"] = { ":TodoTelescope<cr>", desc = "Find TODO" },
@@ -69,6 +66,11 @@ return {
     ["<leader><leader>ri"] = { ":Refactor inline_var<cr>", desc = "Inline var" },
     ["<leader><leader>rb"] = { ":Refactor extract_block ", desc = "Extract block" },
     ["<leader><leader>rf"] = { ":Refactor extract_block_to_file ", desc = "Extract block to file" },
+
+    -- Markdown
+    ["<leader><leader>m"] = { desc = "Markdown" },
+    ["<leader><leader>mp"] = { ":MarkdownPreview<cr>", desc = "Markdown Preview" },
+    ["<leader><leader>ms"] = { ":MarkdownPreviewStop<cr>", desc = "Stop Markdown Preview" },
 
     -- Github
     -- ["<leader>G"] = { name = " Github" },
