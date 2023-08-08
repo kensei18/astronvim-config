@@ -20,6 +20,9 @@ return {
     -- Leader * 2
     ["<leader><leader>"] = { name = "Next Menu" },
 
+    -- save
+    ["<leader>W"] = { ":wa<cr>", desc = "Save all" },
+
     -- buffer
     ["<leader>bn"] = { "<cmd>tabnew<cr>", desc = "New tab" },
     ["<leader>bD"] = {
