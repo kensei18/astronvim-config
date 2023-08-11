@@ -11,7 +11,9 @@ return {
   config = function()
     require("neotest").setup {
       adapters = {
-        require "neotest-go" {},
+        require "neotest-go" {
+          args = { "-count 1" },
+        },
         require "neotest-jest" {},
       },
     }
