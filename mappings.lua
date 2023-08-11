@@ -23,6 +23,9 @@ return {
     -- save
     ["<leader>W"] = { ":wa<cr>", desc = "Save all" },
 
+    -- quit
+    ["<leader>Q"] = { ":qa<cr>", desc = "Quit all" },
+
     -- buffer
     ["<leader>bn"] = { "<cmd>tabnew<cr>", desc = "New tab" },
     ["<leader>bD"] = {
