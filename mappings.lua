@@ -109,4 +109,7 @@ return {
     -- setting a mapping to false will disable it
     -- ["<esc>"] = false,
   },
+  i = {
+    ["<C-p>"] = { function() vim.lsp.buf.signature_help() end, desc = "Signature Help" },
+  },
 }
