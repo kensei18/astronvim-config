@@ -66,7 +66,13 @@ return {
       end,
       desc = "Run nearest test",
     },
-
+    ["<leader><leader>td"] = {
+      function()
+        require("neotest").run.run { strategy = "dap" }
+        require("neotest").summary.open()
+      end,
+      desc = "Debug nearest test",
+    },
     -- refactoring
     ["<leader><leader>r"] = { name = "Refactoring" },
     ["<leader><leader>ri"] = { ":Refactor inline_var<cr>", desc = "Inline var" },
