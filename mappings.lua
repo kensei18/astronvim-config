@@ -4,6 +4,8 @@
 -- lower level configuration and more robust one. (which-key will
 -- automatically pick-up stored data by this setting.)
 
+local get_icon = require("astronvim.utils").get_icon
+
 local function incrementFontSize()
   FontSize = FontSize + 1
   vim.opt.guifont = { FontName, ":h" .. FontSize }
@@ -100,8 +102,12 @@ return {
     -- ["<leader>Gpc"] = { ":Octo pr create<cr>", desc = "Create" },
     -- ["<leader>GpC"] = { ":Octo pr close<cr>", desc = "Close" },
     -- ["<leader>Gpl"] = { ":Octo pr list<cr>", desc = "List" },
+
+    -- open-browser-github
+    ["<leader>go"] = { ":OpenGithubFile<cr>", desc = "Open in Github" },
   },
   x = {
+    ["<leader>g"] = { desc = get_icon("Git", 1, true) .. "Git" },
     ["<leader><leader>"] = { name = "Next Menu" },
 
     -- refactoring
@@ -110,6 +116,9 @@ return {
     ["<leader><leader>re"] = { ":Refactor extract ", desc = "Extract" },
     ["<leader><leader>rv"] = { ":Refactor extract_var ", desc = "Extract var" },
     ["<leader><leader>rf"] = { ":Refactor extract_to_file ", desc = "Extract to file" },
+
+    -- open-browser-github
+    ["<leader>go"] = { ":OpenGithubFile<cr><cr>", desc = "Open in Github" },
   },
   t = {
     -- setting a mapping to false will disable it

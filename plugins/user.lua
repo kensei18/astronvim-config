@@ -80,4 +80,11 @@ return {
   --     vim.api.nvim_set_keymap("i", "<C-i>", "<Plug>(copilot-suggest)", {})
   --   end,
   -- },
+  {
+    "tyru/open-browser-github.vim",
+    dependencies = {
+      "tyru/open-browser.vim",
+    },
+    event = "VeryLazy",
+  },
 }
