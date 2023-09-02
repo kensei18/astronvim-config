@@ -51,7 +51,7 @@ return {
     ["<leader>s"] = { ":HopPattern<cr>", desc = "Go to word" },
 
     -- LSP
-    ["<leader>lL"] = { ":LspRestart<cr>", desc = "Restart LSP" },
+    ["<leader>lt"] = { ":LspRestart<cr>", desc = "Restart LSP" },
 
     -- todo-comments
     ["<leader>fT"] = { ":TodoTelescope<cr>", desc = "Find TODO" },
