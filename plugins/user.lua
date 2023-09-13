@@ -87,4 +87,9 @@ return {
     },
     event = "VeryLazy",
   },
+  {
+    "psliwka/vim-dirtytalk",
+    event = "VeryLazy",
+    build = ":DirtytalkUpdate",
+  },
 }

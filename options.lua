@@ -9,7 +9,7 @@ return {
     number = true, -- sets vim.opt.number
     spell = true, -- sets vim.opt.spell
     spelloptions = { "camel" },
-    spelllang = "en,cjk",
+    spelllang = "en,cjk,programming",
     signcolumn = "auto", -- sets vim.opt.signcolumn to auto
     wrap = false, -- sets vim.opt.wrap
     guifont = { FontName, ":h" .. FontSize },
