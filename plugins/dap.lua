@@ -33,7 +33,8 @@ return {
     dependencies = {
       {
         "microsoft/vscode-js-debug",
-        build = "npm install --legacy-peer-deps && npx gulp vsDebugServerBundle && mv dist out",
+        build = "rm -rf out; npm install --legacy-peer-deps && npx gulp vsDebugServerBundle && mv dist out",
+        tag = "v1.82.0",
       },
     },
     event = "User AstroFile",
