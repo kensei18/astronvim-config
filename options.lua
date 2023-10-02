@@ -7,6 +7,7 @@ return {
     -- set to true or false etc.
     relativenumber = true, -- sets vim.opt.relativenumber
     number = true, -- sets vim.opt.number
+    scrolloff = 8,
     spell = true, -- sets vim.opt.spell
     spelloptions = { "camel" },
     spelllang = "en,cjk,programming",
