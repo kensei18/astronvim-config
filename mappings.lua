@@ -61,6 +61,7 @@ local maps = {
 
     -- neotest
     ["<leader><leader>t"] = { name = "Test" },
+    ["<leader>T"] = { require("neotest").summary.toggle, desc = "Test summary" },
     ["<leader><leader>ts"] = { require("neotest").summary.toggle, desc = "Test summary" },
     ["<leader><leader>tt"] = {
       function()
