@@ -5,6 +5,7 @@
 -- automatically pick-up stored data by this setting.)
 
 local get_icon = require("astronvim.utils").get_icon
+local utils = require "astronvim.utils"
 
 local function incrementFontSize()
   FontSize = FontSize + 1
@@ -16,7 +17,7 @@ local function decrementFontSize()
   vim.opt.guifont = { FontName, ":h" .. FontSize }
 end
 
-return {
+local maps = {
   -- first key is the mode
   n = {
     -- Leader * 2
@@ -128,3 +129,12 @@ return {
     ["<C-p>"] = { function() vim.lsp.buf.signature_help() end, desc = "Signature Help" },
   },
 }
+
+if vim.fn.executable "lazydocker" == 1 then
+  maps.n["<leader>D"] = {
+    function() utils.toggle_term_cmd "lazydocker" end,
+    desc = "ToggleTerm lazydocker",
+  }
+end
+
+return maps
