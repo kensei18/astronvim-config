@@ -28,16 +28,6 @@ return {
     config = function() require("todo-comments").setup {} end,
   },
   {
-    "pwntester/octo.nvim",
-    dependencies = {
-      "nvim-lua/plenary.nvim",
-      "nvim-telescope/telescope.nvim",
-      "nvim-tree/nvim-web-devicons",
-    },
-    event = "VeryLazy",
-    config = function() require("octo").setup {} end,
-  },
-  {
     "ThePrimeagen/refactoring.nvim",
     dependencies = {
       "nvim-lua/plenary.nvim",
@@ -51,22 +41,6 @@ return {
     cmd = "Colortils",
     event = "VeryLazy",
     config = function() require("colortils").setup {} end,
-  },
-  {
-    "kndndrj/nvim-dbee",
-    dependencies = {
-      "MunifTanjim/nui.nvim",
-    },
-    event = "VeryLazy",
-    build = function()
-      -- Install tries to automatically detect the install method.
-      -- if it fails, try calling it with one of these parameters:
-      --    "curl", "wget", "bitsadmin", "go"
-      require("dbee").install()
-    end,
-    config = function()
-      require("dbee").setup(--[[optional config]])
-    end,
   },
   -- {
   --   "github/copilot.vim",
