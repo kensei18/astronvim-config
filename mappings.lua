@@ -130,4 +130,11 @@ if vim.fn.executable "lazydocker" == 1 then
   }
 end
 
+if vim.fn.executable "lazygit" == 1 then
+  maps.n["<leader>gg"] = {
+    function() utils.toggle_term_cmd "lazygit" end,
+    desc = "ToggleTerm lazygit",
+  }
+end
+
 return maps
