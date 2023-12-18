@@ -26,6 +26,7 @@ return {
           require("null-ls").register(require("null-ls").builtins.formatting.prettierd.with {
             disabled_filetypes = {
               "yaml",
+              "markdown",
             },
           })
         end,
