@@ -17,6 +17,14 @@ return function()
   vim.cmd "language en_US.UTF-8"
   vim.opt.nrformats:append { "alpha" }
 
+  vim.filetype.add {
+    filename = {
+      [".env"] = "sh",
+      ["%.env%.[%w_.-]+"] = "sh",
+      [".envrc"] = "sh",
+    },
+  }
+
   vim.api.nvim_set_keymap("", "<D-v>", "+p<CR>", { noremap = true, silent = true })
   vim.api.nvim_set_keymap("!", "<D-v>", "<C-R>+", { noremap = true, silent = true })
   vim.api.nvim_set_keymap("t", "<S-Esc>", "<C-\\><C-n>", { noremap = true, silent = true })
