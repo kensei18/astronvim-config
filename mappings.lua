@@ -99,6 +99,10 @@ local maps = {
 
     -- open-browser-github
     ["<leader>go"] = { ":OpenGithubFile<cr>", desc = "Open in Github" },
+
+    -- blame
+    ["<leader>gb"] = { ":ToggleBlame virtual<cr>", desc = "Toggle virtual blame" },
+    ["<leader>gB"] = { ":ToggleBlame window<cr>", desc = "Toggle window blame" },
   },
   x = {
     ["<leader>g"] = { desc = get_icon("Git", 1, true) .. "Git" },
