@@ -141,4 +141,31 @@ if vim.fn.executable "lazygit" == 1 then
   }
 end
 
+if vim.env.OPENAI_API_KEY ~= "" then
+  local chatgptMaps = {
+    ["<leader>a"] = { name = "ChatGPT" },
+    ["<leader>aa"] = { ":ChatGPT<cr>", desc = "Chat" },
+    ["<leader>ae"] = { ":ChatGPTEditWithInstructions<cr>", desc = "Edit with Instructions" },
+    ["<leader>at"] = { ":ChatGPTActAs<cr>", desc = "Act as" },
+
+    ["<leader>ar"] = { name = "Run" },
+    ["<leader>ara"] = { ":ChatGPTRun add_tests<CR>", desc = "Add Tests" },
+    ["<leader>ard"] = { ":ChatGPTRun docstring<CR>", desc = "Docstring" },
+    ["<leader>are"] = { ":ChatGPTRun explain_code<CR>", desc = "Explain Code" },
+    ["<leader>arf"] = { ":ChatGPTRun fix_bugs<CR>", desc = "Fix Bugs" },
+    ["<leader>arg"] = { ":ChatGPTRun grammar_correction<CR>", desc = "Grammar Correction" },
+    ["<leader>ark"] = { ":ChatGPTRun keywords<CR>", desc = "Keywords" },
+    ["<leader>arl"] = { ":ChatGPTRun code_readability_analysis<CR>", desc = "Code Readability Analysis" },
+    ["<leader>aro"] = { ":ChatGPTRun optimize_code<CR>", desc = "Optimize Code" },
+    ["<leader>arr"] = { ":ChatGPTRun roxygen_edit<CR>", desc = "Roxygen Edit" },
+    ["<leader>ars"] = { ":ChatGPTRun summarize<CR>", desc = "Summarize" },
+    ["<leader>art"] = { ":ChatGPTRun translate<CR>", desc = "Translate" },
+  }
+
+  for k, v in pairs(chatgptMaps) do
+    maps.n[k] = v
+    maps.x[k] = v
+  end
+end
+
 return maps
