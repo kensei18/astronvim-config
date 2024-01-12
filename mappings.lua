@@ -98,7 +98,8 @@ local maps = {
     -- ["<leader>Gpl"] = { ":Octo pr list<cr>", desc = "List" },
 
     -- open-browser-github
-    ["<leader>go"] = { ":OpenGithubFile<cr>", desc = "Open in Github" },
+    ["<leader>go"] = { ":OpenGithubFile<cr><cr>", desc = "Open in Github" },
+    ["<leader>gP"] = { ":OpenGithubPullReq<cr><cr>", desc = "Open Pull Request" },
 
     -- blame
     ["<leader>gb"] = { ":ToggleBlame virtual<cr>", desc = "Toggle virtual blame" },
