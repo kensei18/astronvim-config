@@ -8,7 +8,7 @@ return {
     relativenumber = true, -- sets vim.opt.relativenumber
     number = true, -- sets vim.opt.number
     scrolloff = 8,
-    spell = true, -- sets vim.opt.spell
+    spell = false, -- sets vim.opt.spell
     spelloptions = { "camel" },
     spelllang = "en,cjk,programming",
     signcolumn = "auto", -- sets vim.opt.signcolumn to auto
