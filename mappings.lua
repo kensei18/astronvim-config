@@ -8,6 +8,7 @@ local get_icon = require("astronvim.utils").get_icon
 local utils = require "astronvim.utils"
 local neotest = require "neotest"
 local todo_comment = require "todo-comments"
+local cspell_command = astronvim.user_opts "commands.cspell"
 
 local function incrementFontSize()
   FontSize = FontSize + 1
@@ -22,6 +23,7 @@ end
 local maps = {
   -- first key is the mode
   n = {
+    ["zg"] = { function() cspell_command.append() end },
     -- Leader * 2
     ["<leader><leader>"] = { name = "Next Menu" },
 
