@@ -6,6 +6,8 @@
 
 local get_icon = require("astronvim.utils").get_icon
 local utils = require "astronvim.utils"
+local neotest = require "neotest"
+local todo_comment = require "todo-comments"
 
 local function incrementFontSize()
   FontSize = FontSize + 1
@@ -48,24 +50,24 @@ local maps = {
 
     -- todo-comments
     ["<leader>fT"] = { ":TodoTelescope<cr>", desc = "Find TODO" },
-    ["]o"] = { require("todo-comments").jump_next, desc = "Next TODO" },
-    ["[o"] = { require("todo-comments").jump_prev, desc = "Previous TODO" },
+    ["]o"] = { todo_comment.jump_next, desc = "Next TODO" },
+    ["[o"] = { todo_comment.jump_prev, desc = "Previous TODO" },
 
     -- neotest
     ["<leader><leader>t"] = { name = "Test" },
-    ["<leader>T"] = { require("neotest").summary.toggle, desc = "Test summary" },
-    ["<leader><leader>ts"] = { require("neotest").summary.toggle, desc = "Test summary" },
+    ["<leader>T"] = { neotest.summary.toggle, desc = "Test summary" },
+    ["<leader><leader>ts"] = { neotest.summary.toggle, desc = "Test summary" },
     ["<leader><leader>tt"] = {
       function()
-        require("neotest").run.run()
-        require("neotest").summary.open()
+        neotest.run.run()
+        neotest.summary.open()
       end,
       desc = "Run nearest test",
     },
     ["<leader><leader>td"] = {
       function()
-        require("neotest").run.run { strategy = "dap" }
-        require("neotest").summary.open()
+        neotest.run.run { strategy = "dap" }
+        neotest.summary.open()
       end,
       desc = "Debug nearest test",
     },
