@@ -81,11 +81,7 @@ local maps = {
     ["<leader><leader>ms"] = { ":MarkdownPreviewStop<cr>", desc = "Stop Markdown Preview" },
 
     -- Github
-    ["<leader>G"] = { name = " Github" },
-    ["<leader>GP"] = { ":Octo pr create<cr>", desc = "Create Pull Request" },
-    ["<leader>Gp"] = { ":Octo pr search<cr>", desc = "Search Pull Request" },
-    ["<leader>GI"] = { ":Octo issue create<cr>", desc = "Create Issue" },
-    ["<leader>Gi"] = { ":Octo issue search<cr>", desc = "Search Issue" },
+    ["<leader>G"] = { ":Octo<cr>", desc = " Github" },
 
     -- open-browser-github
     ["<leader>go"] = { ":OpenGithubFile<cr><cr>", desc = "Open in Github" },

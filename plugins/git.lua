@@ -19,6 +19,10 @@ return {
       "nvim-tree/nvim-web-devicons",
     },
     event = "VeryLazy",
-    config = function() require("octo").setup {} end,
+    config = function()
+      require("octo").setup {
+        enable_builtin = true,
+      }
+    end,
   },
 }
