@@ -47,7 +47,7 @@ local maps = {
     ["<leader>-"] = { decrementFontSize, desc = "Decrement Font Size" },
 
     -- easy motion
-    ["<leader>s"] = { ":HopPattern<cr>", desc = "Go to word" },
+    ["<leader>s"] = { ":HopPatternMW<cr>", desc = "Go to word" },
 
     -- LSP
     ["<leader>lt"] = { ":LspRestart<cr>", desc = "Restart LSP" },
