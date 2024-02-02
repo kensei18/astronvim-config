@@ -9,6 +9,7 @@ local utils = require "astronvim.utils"
 local neotest = require "neotest"
 local todo_comment = require "todo-comments"
 local cspell_command = astronvim.user_opts "commands.cspell"
+local docker_command = astronvim.user_opts "commands.docker"
 
 local function incrementFontSize()
   FontSize = FontSize + 1
@@ -119,22 +120,7 @@ local maps = {
 }
 
 if vim.fn.executable "lazydocker" == 1 then
-  maps.n["<leader>D"] = {
-    function()
-      vim.ui.input({ prompt = "docker compose files", completion = "file" }, function(input)
-        if input ~= nil and input ~= "" then
-          local file_flag = ""
-          for _, file in ipairs(vim.split(input, " ", { trimempty = true })) do
-            file_flag = file_flag .. " -f " .. file
-            utils.toggle_term_cmd("lazydocker " .. file_flag)
-          end
-        else
-          utils.toggle_term_cmd "lazydocker"
-        end
-      end)
-    end,
-    desc = "ToggleTerm lazydocker",
-  }
+  maps.n["<leader>D"] = { docker_command.open_lazydocker, desc = "ToggleTerm lazydocker" }
 end
 
 if vim.fn.executable "lazygit" == 1 then
