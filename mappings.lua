@@ -10,6 +10,7 @@ local neotest = require "neotest"
 local todo_comment = require "todo-comments"
 local cspell_command = astronvim.user_opts "commands.cspell"
 local docker_command = astronvim.user_opts "commands.docker"
+local github_command = astronvim.user_opts "commands.github"
 
 local function incrementFontSize()
   FontSize = FontSize + 1
@@ -86,7 +87,9 @@ local maps = {
     ["<leader><leader>ms"] = { ":MarkdownPreviewStop<cr>", desc = "Stop Markdown Preview" },
 
     -- Github
-    ["<leader>G"] = { ":Octo<cr>", desc = " Github" },
+    ["<leader>G"] = { name = " Github" },
+    ["<leader>GG"] = { ":Octo<cr>", desc = "Octo" },
+    ["<leader>Gr"] = { github_command.browse_repo, desc = "Open repo in browser" },
 
     -- open-browser-github
     ["<leader>go"] = { ":OpenGithubFile<cr><cr>", desc = "Open in Github" },
