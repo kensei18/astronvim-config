@@ -17,6 +17,23 @@ return {
     config = function() require("hop").setup {} end,
   },
   {
+    "HiPhish/rainbow-delimiters.nvim",
+    event = "VeryLazy",
+    config = function()
+      require("rainbow-delimiters.setup").setup {
+        highlight = {
+          "RainbowDelimiterViolet",
+          "RainbowDelimiterYellow",
+          "RainbowDelimiterBlue",
+          "RainbowDelimiterOrange",
+          "RainbowDelimiterGreen",
+          "RainbowDelimiterRed",
+          "RainbowDelimiterCyan",
+        },
+      }
+    end,
+  },
+  {
     "iamcco/markdown-preview.nvim",
     event = "VeryLazy",
     config = function() vim.fn["mkdp#util#install"]() end,
