@@ -54,8 +54,8 @@ local maps = {
 
     -- todo-comments
     ["<leader>fT"] = { ":TodoTelescope<cr>", desc = "Find TODO" },
-    ["]o"] = { todo_comment.jump_next, desc = "Next TODO" },
-    ["[o"] = { todo_comment.jump_prev, desc = "Previous TODO" },
+    ["]T"] = { todo_comment.jump_next, desc = "Next TODO" },
+    ["[T"] = { todo_comment.jump_prev, desc = "Previous TODO" },
 
     -- neotest
     ["<leader><leader>t"] = { name = "Test" },
