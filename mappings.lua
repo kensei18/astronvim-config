@@ -122,6 +122,9 @@ local maps = {
   },
 }
 
+maps.n["<C-p>"] = { '"0p' }
+maps.x["<C-p>"] = { '"0p' }
+
 if vim.fn.executable "lazydocker" == 1 then
   maps.n["<leader>D"] = { docker_command.open_lazydocker, desc = "ToggleTerm lazydocker" }
 end
