@@ -86,10 +86,9 @@ local maps = {
     ["<leader><leader>mp"] = { ":MarkdownPreview<cr>", desc = "Markdown Preview" },
     ["<leader><leader>ms"] = { ":MarkdownPreviewStop<cr>", desc = "Stop Markdown Preview" },
 
-    -- Github
-    ["<leader>G"] = { name = " Github" },
-    ["<leader>GG"] = { ":Octo<cr>", desc = "Octo" },
-    ["<leader>Gr"] = { github_command.browse_repo, desc = "Open repo in browser" },
+    -- Octo
+    ["<leader>gG"] = { ":Octo<cr>", desc = "Octo" },
+    ["<leader>gR"] = { github_command.browse_repo, desc = "Open repo in browser" },
 
     -- open-browser-github
     ["<leader>go"] = { ":OpenGithubFile<cr><cr>", desc = "Open in Github" },
