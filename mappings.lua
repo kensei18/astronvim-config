@@ -8,9 +8,12 @@ local get_icon = require("astronvim.utils").get_icon
 local utils = require "astronvim.utils"
 local neotest = require "neotest"
 local todo_comment = require "todo-comments"
+local telescope_builtin = require "telescope.builtin"
+
 local cspell_command = astronvim.user_opts "commands.cspell"
 local docker_command = astronvim.user_opts "commands.docker"
 local github_command = astronvim.user_opts "commands.github"
+local telescope_command = astronvim.user_opts "commands.telescope"
 
 local function incrementFontSize()
   FontSize = FontSize + 1
@@ -97,6 +100,29 @@ local maps = {
     -- blame
     ["<leader>gb"] = { ":ToggleBlame virtual<cr>", desc = "Toggle virtual blame" },
     ["<leader>gB"] = { ":ToggleBlame window<cr>", desc = "Toggle window blame" },
+
+    -- Telescope with search_dirs
+    ["<leader>fd"] = { name = "With directories" },
+    ["<leader>fdf"] = {
+      function() telescope_command.with_search_dirs(telescope_builtin.find_files) end,
+      desc = "Find files",
+    },
+    ["<leader>fdF"] = {
+      function() telescope_command.with_search_dirs(telescope_builtin.find_files, { hidden = true, no_ignore = true }) end,
+      desc = "Find all files",
+    },
+    ["<leader>fdw"] = {
+      function() telescope_command.with_search_dirs(telescope_builtin.live_grep) end,
+      desc = "Find words",
+    },
+    ["<leader>fdW"] = {
+      function()
+        telescope_command.with_search_dirs(telescope_builtin.live_grep, {
+          additional_args = function(args) return vim.list_extend(args, { "--hidden", "--no-ignore" }) end,
+        })
+      end,
+      desc = "Find words in all files",
+    },
   },
   x = {
     ["<leader>g"] = { desc = get_icon("Git", 1, true) .. "Git" },
