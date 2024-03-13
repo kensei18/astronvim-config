@@ -17,7 +17,7 @@ function M.with_search_dirs(f, opts)
     f(confirm_opts)
   end
 
-  vim.ui.input({ prompt = "Directories" }, on_confirm)
+  vim.ui.input({ prompt = "Directories", completion = "file" }, on_confirm)
 end
 
 return M
