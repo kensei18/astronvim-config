@@ -45,7 +45,7 @@ local maps = {
     },
 
     -- sessions
-    ["<leader>r"] = { function() require("resession").load() end, desc = "Load a session" },
+    ["<leader>r"] = { function() require("resession").load(nil, { dir = "dirsession" }) end, desc = "Load a session" },
 
     -- font size
     ["<leader>+"] = { incrementFontSize, desc = "Increment Font Size" },
