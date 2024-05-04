@@ -36,10 +36,10 @@ local maps = {
 
     -- buffer
     ["<leader>bt"] = { "<cmd>tabnew<cr>", desc = "New tab" },
-    ["<leader>bb"] = { function() require("telescope.builtin").buffers() end, desc = "Find buffers" },
+    ["<leader>bb"] = { ":Telescope buffers<cr>", desc = "Find buffers" },
     ["<leader>bB"] = {
       function()
-        require("astronvim.utils.status.heirline").buffer_picker(function(bufnr) vim.api.nvim_win_set_buf(0, bufnr) end)
+        require("astroui.status.heirline").buffer_picker(function(bufnr) vim.api.nvim_win_set_buf(0, bufnr) end)
       end,
       desc = "Select buffer from tabline",
     },
