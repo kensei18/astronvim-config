@@ -45,7 +45,12 @@ local maps = {
     },
 
     -- sessions
-    ["<leader>r"] = { function() require("resession").load(nil, { dir = "dirsession" }) end, desc = "Load a session" },
+    ["<leader>r"] = { function() require("resession").load() end, desc = "Load a session" },
+    ["<Leader>SS"] = { function() require("resession").save() end, desc = "Save this session" },
+    ["<Leader>Ss"] = {
+      function() require("resession").save(vim.fn.getcwd(), { dir = "dirsession" }) end,
+      desc = "Save this dirsession",
+    },
 
     -- font size
     ["<leader>+"] = { incrementFontSize, desc = "Increment Font Size" },
