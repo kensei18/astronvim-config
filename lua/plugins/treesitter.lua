@@ -11,6 +11,8 @@ return {
       "lua",
       "vim",
       "go",
+      "gomod",
+      "gosum",
       "python",
       "typescript",
       "json",
