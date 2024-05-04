@@ -37,12 +37,6 @@ local maps = {
     -- buffer
     ["<leader>bt"] = { "<cmd>tabnew<cr>", desc = "New tab" },
     ["<leader>bb"] = { ":Telescope buffers<cr>", desc = "Find buffers" },
-    ["<leader>bB"] = {
-      function()
-        require("astroui.status.heirline").buffer_picker(function(bufnr) vim.api.nvim_win_set_buf(0, bufnr) end)
-      end,
-      desc = "Select buffer from tabline",
-    },
 
     -- sessions
     ["<leader>r"] = { function() require("resession").load(nil, { dir = "dirsession" }) end, desc = "Load a session" },
