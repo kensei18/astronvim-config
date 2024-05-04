@@ -20,6 +20,7 @@ return {
       "toml",
       "html",
       "css",
+      "make",
       "graphql",
       "terraform",
       "markdown",
