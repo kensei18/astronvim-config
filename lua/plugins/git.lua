@@ -9,7 +9,11 @@ return {
   {
     "FabijanZulj/blame.nvim",
     event = "VeryLazy",
-    config = function() require("blame").setup {} end,
+    config = function()
+      require("blame").setup {
+        date_format = "%Y-%m-%d",
+      }
+    end,
   },
   {
     "pwntester/octo.nvim",
