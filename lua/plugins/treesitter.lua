@@ -13,6 +13,7 @@ return {
       "go",
       "gomod",
       "gosum",
+      "gotmpl",
       "python",
       "typescript",
       "json",
