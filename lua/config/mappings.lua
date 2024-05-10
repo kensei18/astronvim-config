@@ -87,8 +87,8 @@ local maps = {
     ["<Leader>gP"] = { ":OpenGithubPullReq<cr><cr>", desc = "Open Pull Request" },
 
     -- blame
-    ["<Leader>gb"] = { ":ToggleBlame virtual<cr>", desc = "Toggle virtual blame" },
-    ["<Leader>gB"] = { ":ToggleBlame window<cr>", desc = "Toggle window blame" },
+    ["<Leader>gb"] = { ":BlameToggle virtual<cr>", desc = "Toggle virtual blame" },
+    ["<Leader>gB"] = { ":BlameToggle window<cr>", desc = "Toggle window blame" },
 
     -- Telescope with search_dirs
     ["<Leader>fd"] = { name = "With directories" },
