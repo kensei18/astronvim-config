@@ -7,14 +7,14 @@ return {
       "nvim-treesitter/nvim-treesitter",
       "nvimtools/none-ls.nvim",
     },
-    event = { "VeryLazy" },
+    config = function() require("go").setup() end,
+    event = { "CmdlineEnter" },
     ft = { "go", "gomod" },
     build = ':lua require("go.install").update_all_sync()',
   },
   {
-    -- depends on `impl`:
-    --  go install github.com/josharian/impl@latest
     "edolphin-ydf/goimpl.nvim",
+    build = "go install github.com/josharian/impl@latest",
     dependencies = {
       "nvim-lua/plenary.nvim",
       "nvim-lua/popup.nvim",
