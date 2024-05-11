@@ -12,6 +12,9 @@ function M.with_search_dirs(f, opts)
         table.insert(dirs, dir)
       end
       confirm_opts = vim.tbl_extend("force", opts, { search_dirs = dirs })
+    else
+      local dir = vim.fn.fnamemodify(vim.api.nvim_buf_get_name(0), ":h")
+      confirm_opts = vim.tbl_extend("force", opts, { search_dirs = { dir } })
     end
 
     f(confirm_opts)
@@ -19,5 +22,4 @@ function M.with_search_dirs(f, opts)
 
   vim.ui.input({ prompt = "Directories", completion = "file" }, on_confirm)
 end
-
 return M
