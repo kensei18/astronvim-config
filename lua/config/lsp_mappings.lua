@@ -16,7 +16,7 @@ local maps = {
   },
 }
 
-if vim.fn.executable "impl" then
+if vim.fn.executable "impl" == 1 then
   maps.n["<Leader>lgi"] = {
     function() require("telescope").extensions.goimpl.goimpl {} end,
     desc = "goimpl",
