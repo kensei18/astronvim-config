@@ -42,11 +42,12 @@ return {
       opts.handlers = {
         prettierd = function()
           require("null-ls").register(require("null-ls").builtins.formatting.prettierd.with {
-            condition = function(utils)
-              return utils.root_has_file "package.json"
-                or utils.root_has_file ".prettierrc"
-                or utils.root_has_file ".prettierrc.json"
-                or utils.root_has_file ".prettierrc.js"
+            condition = function()
+              local pathutils = require "utils.path"
+              return pathutils.has_files(
+                { ".prettierrc", ".prettierrc.json", ".prettierrc.yaml", ".prettierrc.yml", ".prettierrc.js" },
+                pathutils.get_current_buf_directory()
+              )
             end,
           })
         end,
