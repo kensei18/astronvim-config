@@ -10,16 +10,63 @@ return {
     event = "VeryLazy",
     config = function() require("chatgpt").setup {} end,
   },
+  {
+    "zbirenbaum/copilot.lua",
+    cmd = "Copilot",
+    event = "InsertEnter",
+    config = function()
+      require("copilot").setup {
+        panel = {
+          enabled = true,
+          auto_refresh = true,
+          keymap = {
+            jump_prev = "[[",
+            jump_next = "]]",
+            accept = "<CR>",
+            refresh = "gr",
+            open = "<C-y>",
+          },
+        },
+        suggestion = {
+          enabled = true,
+          auto_trigger = true,
+          debounce = 15,
+          keymap = {
+            accept = "<C-l>",
+            next = "<C-j>",
+            prev = "<C-k>",
+            dismiss = "<C-h>",
+          },
+        },
+        filetypes = { yaml = true },
+      }
+    end,
+  },
   -- {
-  --   "github/copilot.vim",
-  --   event = "VeryLazy",
-  --   config = function()
-  --     vim.g.copilot_no_tab_map = true
-  --     vim.api.nvim_set_keymap("i", "<C-l>", 'copilot#Accept("<CR>")', { silent = true, expr = true })
-  --     vim.api.nvim_set_keymap("i", "<C-j>", "<Plug>(copilot-next)", {})
-  --     vim.api.nvim_set_keymap("i", "<C-k>", "<Plug>(copilot-previous)", {})
-  --     vim.api.nvim_set_keymap("i", "<C-h>", "<Plug>(copilot-dismiss)", {})
-  --     vim.api.nvim_set_keymap("i", "<C-i>", "<Plug>(copilot-suggest)", {})
+  --   "zbirenbaum/copilot-cmp",
+  --   event = { "InsertEnter", "LspAttach" },
+  --   config = function() require("copilot_cmp").setup() end,
+  -- },
+  -- {
+  --   "hrsh7th/nvim-cmp",
+  --   opts = function(_, opts)
+  --     local cmp = require "cmp"
+  --
+  --     opts.sources = vim.tbl_deep_extend(
+  --       "force",
+  --       opts.sources,
+  --       cmp.config.sources {
+  --         { name = "copilot" },
+  --       }
+  --     )
+  --   end,
+  -- },
+  -- {
+  --   "onsails/lspkind.nvim",
+  --   opts = function(_, opts)
+  --     opts.symbol_map = vim.tbl_deep_extend("force", opts.symbol_map, {
+  --       Copilot = "",
+  --     })
   --   end,
   -- },
 }
