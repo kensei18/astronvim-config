@@ -36,6 +36,7 @@ return {
         "stylua",
         "goimports",
         "cspell",
+        "impl",
       })
 
       opts.handlers = {
