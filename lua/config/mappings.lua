@@ -4,6 +4,8 @@ local maps = {
     L = { function() require("astrocore.buffer").nav(vim.v.count1) end, desc = "Next buffer" },
     H = { function() require("astrocore.buffer").nav(-vim.v.count1) end, desc = "Previous buffer" },
 
+    ["<Leader>pr"] = { ":Lazy restore<cr>", desc = "Plugins Restore" },
+
     ["zg"] = { function() require("config.commands.cspell").append() end },
     -- Leader * 2
     ["<Leader><Leader>"] = { name = "Next Menu" },
