@@ -37,20 +37,6 @@ return {
         "goimports",
         "cspell",
       })
-
-      opts.handlers = {
-        prettierd = function()
-          require("null-ls").register(require("null-ls").builtins.formatting.prettierd.with {
-            condition = function()
-              local pathutils = require "utils.path"
-              return pathutils.has_files(
-                { ".prettierrc", ".prettierrc.json", ".prettierrc.yaml", ".prettierrc.yml", ".prettierrc.js" },
-                pathutils.get_current_buf_directory()
-              )
-            end,
-          })
-        end,
-      }
     end,
   },
   {
