@@ -42,6 +42,22 @@ return {
       }
     end,
   },
+  {
+    "CopilotC-Nvim/CopilotChat.nvim",
+    branch = "canary",
+    dependencies = {
+      { "zbirenbaum/copilot.lua" },
+      { "nvim-lua/plenary.nvim" },
+    },
+    config = function()
+      require("CopilotChat").setup {
+        window = {
+          layout = "vertical",
+          width = 0.4,
+        },
+      }
+    end,
+  },
   -- {
   --   "zbirenbaum/copilot-cmp",
   --   event = { "InsertEnter", "LspAttach" },
