@@ -11,7 +11,7 @@ local maps = {
     ["<Leader><Leader>"] = { name = "Next Menu" },
 
     -- save
-    ["<Leader>W"] = { ":wa<cr>", desc = "Save all" },
+    ["<Leader>w"] = { ":wa<cr>", desc = "Save all" },
 
     -- quit
     ["<Leader>Q"] = { ":qa<cr>", desc = "Quit all" },
