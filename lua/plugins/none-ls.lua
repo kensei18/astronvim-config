@@ -32,13 +32,9 @@ return {
 
       config.should_attach = function(bufnr)
         local ft = vim.api.nvim_buf_get_option(bufnr, "filetype")
-        print("should_attach", ft)
         for _, source in ipairs(sources.get_all()) do
-          print("debug", source.name)
           if sources.is_available(source, ft) then
-            print("debug: is_available", source.name, ft)
             if source.name == "prettierd" then
-              print(source.name, pathutils.get_buf_directory(bufnr))
               return pathutils.has_files({
                 ".prettierrc",
                 ".prettierrc.json",
