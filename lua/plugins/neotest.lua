@@ -6,7 +6,7 @@ return {
       "nvim-lua/plenary.nvim",
       "nvim-treesitter/nvim-treesitter",
       "antoinemadec/FixCursorHold.nvim",
-      "nvim-neotest/neotest-go",
+      "fredrikaverpil/neotest-golang",
       "nvim-neotest/neotest-jest",
     },
     event = "VeryLazy",
@@ -22,8 +22,8 @@ return {
       }, neotest_ns)
       require("neotest").setup {
         adapters = {
-          require "neotest-go" {
-            args = { "-count 1" },
+          require "neotest-golang" {
+            dap_go_enabled = true,
           },
           require "neotest-jest" {},
         },
