@@ -16,6 +16,9 @@ local maps = {
     -- quit
     ["<Leader>Q"] = { ":qa<cr>", desc = "Quit all" },
 
+    -- LSP reference
+    ["gr"] = { function() require("telescope.builtin").lsp_references() end, desc = "LSP References" },
+
     -- buffer
     ["<Leader>bt"] = { "<cmd>tabnew<cr>", desc = "New tab" },
     ["<Leader>bb"] = { ":Telescope buffers<cr>", desc = "Find buffers" },
