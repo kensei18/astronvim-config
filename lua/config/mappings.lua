@@ -164,11 +164,12 @@ end
 
 if vim.env.OPENAI_API_KEY ~= "" then
   local chatgptMaps = {
-    ["<Leader>a"] = { name = "ChatGPT" },
+    ["<Leader>a"] = { name = "AI" },
     ["<Leader>aa"] = { ":ChatGPT<cr>", desc = "Chat" },
     ["<Leader>ac"] = { ":ChatGPTCompleteCode<cr>", desc = "Complete Code" },
     ["<Leader>ae"] = { ":ChatGPTEditWithInstructions<cr>", desc = "Edit with Instructions" },
     ["<Leader>at"] = { ":ChatGPTActAs<cr>", desc = "Act as" },
+    ["<Leader>ap"] = { ":CopilotChat<cr>", desc = "Github Copilot Chat" },
 
     ["<Leader>ar"] = { name = "Run" },
     ["<Leader>ara"] = { ":ChatGPTRun add_tests<CR>", desc = "Add Tests" },

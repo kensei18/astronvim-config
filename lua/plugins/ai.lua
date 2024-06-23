@@ -52,8 +52,7 @@ return {
     config = function()
       require("CopilotChat").setup {
         window = {
-          layout = "vertical",
-          width = 0.4,
+          layout = "float",
         },
       }
     end,
