@@ -122,6 +122,12 @@ local maps = {
       end,
       desc = "Find words in all files",
     },
+
+    -- move
+    ["<A-j>"] = { ":MoveLine(1)<CR>" },
+    ["<A-k>"] = { ":MoveLine(-1)<CR>" },
+    ["<A-h>"] = { ":MoveHChar(-1)<CR>" },
+    ["<A-l>"] = { ":MoveHChar(1)<CR>" },
   },
   x = {
     ["<Leader>g"] = { desc = require("astroui").get_icon("Git", 1, true) .. "Git" },
@@ -136,6 +142,12 @@ local maps = {
 
     -- open-browser-github
     ["<Leader>go"] = { ":OpenGithubFile<cr><cr>", desc = "Open in Github" },
+
+    -- move
+    ["<A-j>"] = { ":MoveBlock(1)<CR>" },
+    ["<A-k>"] = { ":MoveBlock(-1)<CR>" },
+    ["<A-h>"] = { ":MoveHBlock(-1)<CR>" },
+    ["<A-l>"] = { ":MoveHBlock(1)<CR>" },
   },
   t = {
     -- setting a mapping to false will disable it
