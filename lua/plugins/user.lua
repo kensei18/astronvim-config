@@ -106,4 +106,19 @@ return {
     event = "VeryLazy",
     config = function() require("move").setup {} end,
   },
+  {
+    "NoahTheDuke/vim-just",
+    dependencies = {
+      "nvim-treesitter/nvim-treesitter",
+    },
+    ft = { "just" },
+    config = function()
+      require("nvim-treesitter.configs").setup {
+        highlight = {
+          enable = true,
+          disable = { "just" },
+        },
+      }
+    end,
+  },
 }
