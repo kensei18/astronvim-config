@@ -57,31 +57,4 @@ return {
       }
     end,
   },
-  -- {
-  --   "zbirenbaum/copilot-cmp",
-  --   event = { "InsertEnter", "LspAttach" },
-  --   config = function() require("copilot_cmp").setup() end,
-  -- },
-  -- {
-  --   "hrsh7th/nvim-cmp",
-  --   opts = function(_, opts)
-  --     local cmp = require "cmp"
-  --
-  --     opts.sources = vim.tbl_deep_extend(
-  --       "force",
-  --       opts.sources,
-  --       cmp.config.sources {
-  --         { name = "copilot" },
-  --       }
-  --     )
-  --   end,
-  -- },
-  -- {
-  --   "onsails/lspkind.nvim",
-  --   opts = function(_, opts)
-  --     opts.symbol_map = vim.tbl_deep_extend("force", opts.symbol_map, {
-  --       Copilot = "",
-  --     })
-  --   end,
-  -- },
 }
