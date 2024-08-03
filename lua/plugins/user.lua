@@ -121,4 +121,10 @@ return {
       }
     end,
   },
+  {
+    "akinsho/toggleterm.nvim",
+    opts = {
+      direction = "float",
+    },
+  },
 }
