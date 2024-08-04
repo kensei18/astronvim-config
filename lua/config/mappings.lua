@@ -16,8 +16,12 @@ local maps = {
     -- quit
     ["<Leader>Q"] = { ":qa<cr>", desc = "Quit all" },
 
-    -- LSP reference
+    -- telescope
     ["gr"] = { function() require("telescope.builtin").lsp_references() end, desc = "LSP References" },
+    ["<Leader>lD"] = {
+      function() require("telescope.builtin").diagnostics { severity_limit = vim.diagnostic.severity.WARN } end,
+      desc = "Search Diagnostics",
+    },
 
     -- buffer
     ["<Leader>bt"] = { "<cmd>tabnew<cr>", desc = "New tab" },
