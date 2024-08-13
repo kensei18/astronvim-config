@@ -7,6 +7,10 @@ local maps = {
       desc = "Declaration of current symbol",
       cond = "textDocument/declaration",
     },
+    gI = {
+      function() require("telescope.builtin").lsp_implementations() end,
+      desc = "Implementation of current symbol",
+    },
     ["<Leader>uY"] = {
       function() require("astrolsp.toggles").buffer_semantic_tokens() end,
       desc = "Toggle LSP semantic highlight (buffer)",
