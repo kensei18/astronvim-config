@@ -173,7 +173,7 @@ end
 
 if vim.fn.executable "lazygit" == 1 then
   maps.n["<Leader>gg"] = {
-    function() require("astrocore").toggle_term_cmd "lazygit" end,
+    function() require("astrocore").toggle_term_cmd { cmd = "lazygit", direction = "float" } end,
     desc = "ToggleTerm lazygit",
   }
 end

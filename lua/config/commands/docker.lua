@@ -8,10 +8,10 @@ function M.open_lazydocker()
       local file_flag = ""
       for _, file in ipairs(vim.split(input, " ", { trimempty = true })) do
         file_flag = file_flag .. " -f " .. file
-        utils.toggle_term_cmd("lazydocker " .. file_flag)
+        utils.toggle_term_cmd { cmd = "lazydocker " .. file_flag, direction = "float" }
       end
     else
-      utils.toggle_term_cmd "lazydocker"
+      utils.toggle_term_cmd { cmd = "lazydocker", direction = "float" }
     end
   end)
 end
