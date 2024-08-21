@@ -178,14 +178,17 @@ if vim.fn.executable "lazygit" == 1 then
   }
 end
 
+local aiMaps = {
+  ["<Leader>a"] = { name = "AI" },
+  ["<Leader>ag"] = { ":CopilotChat<cr>", desc = "Github Copilot Chat" },
+}
+
 if vim.env.OPENAI_API_KEY ~= "" then
-  local chatgptMaps = {
-    ["<Leader>a"] = { name = "AI" },
+  local additionalAiMap = {
     ["<Leader>aa"] = { ":ChatGPT<cr>", desc = "Chat" },
     ["<Leader>ac"] = { ":ChatGPTCompleteCode<cr>", desc = "Complete Code" },
     ["<Leader>ae"] = { ":ChatGPTEditWithInstructions<cr>", desc = "Edit with Instructions" },
     ["<Leader>at"] = { ":ChatGPTActAs<cr>", desc = "Act as" },
-    ["<Leader>ap"] = { ":CopilotChat<cr>", desc = "Github Copilot Chat" },
 
     ["<Leader>ar"] = { name = "Run" },
     ["<Leader>ara"] = { ":ChatGPTRun add_tests<CR>", desc = "Add Tests" },
@@ -201,10 +204,14 @@ if vim.env.OPENAI_API_KEY ~= "" then
     ["<Leader>art"] = { ":ChatGPTRun translate<CR>", desc = "Translate" },
   }
 
-  for k, v in pairs(chatgptMaps) do
-    maps.n[k] = v
-    maps.x[k] = v
+  for k, v in pairs(additionalAiMap) do
+    aiMaps[k] = v
   end
+end
+
+for k, v in pairs(aiMaps) do
+  maps.n[k] = v
+  maps.x[k] = v
 end
 
 return maps
