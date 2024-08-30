@@ -6,8 +6,8 @@ return {
       "nvim-lua/plenary.nvim",
       "nvim-treesitter/nvim-treesitter",
       "antoinemadec/FixCursorHold.nvim",
-      -- "fredrikaverpil/neotest-golang",
-      "nvim-neotest/neotest-go",
+      -- "nvim-neotest/neotest-go",
+      "fredrikaverpil/neotest-golang",
       "nvim-neotest/neotest-jest",
     },
     event = "VeryLazy",
@@ -23,7 +23,8 @@ return {
       }, neotest_ns)
       require("neotest").setup {
         adapters = {
-          require "neotest-go",
+          -- require "neotest-go",
+          require "neotest-golang",
           require "neotest-jest" {},
         },
       }
