@@ -94,10 +94,11 @@ local maps = {
     -- open-browser-github
     ["<Leader>go"] = { ":OpenGithubFile<cr><cr>", desc = "Open in Github" },
     ["<Leader>gP"] = { ":OpenGithubPullReq<cr><cr>", desc = "Open Pull Request" },
+    ["<Leader>gB"] = { ":!gh browse<cr><cr>", desc = "Browse Github" },
 
     -- blame
-    ["<Leader>gb"] = { ":BlameToggle virtual<cr>", desc = "Toggle virtual blame" },
-    ["<Leader>gB"] = { ":BlameToggle window<cr>", desc = "Toggle window blame" },
+    -- ["<Leader>gb"] = { ":BlameToggle virtual<cr>", desc = "Toggle virtual blame" },
+    ["<Leader>gb"] = { ":BlameToggle window<cr>", desc = "Toggle blame" },
 
     -- Telescope with search_dirs
     ["<Leader>fd"] = { name = "With directories" },
