@@ -1,5 +1,11 @@
 return {
   {
+    "akinsho/toggleterm.nvim",
+    opts = {
+      direction = "float",
+    },
+  },
+  {
     "folke/neodev.nvim",
     event = "VeryLazy",
     config = function()
@@ -122,9 +128,14 @@ return {
     end,
   },
   {
-    "akinsho/toggleterm.nvim",
-    opts = {
-      direction = "float",
-    },
+    "vinnymeller/swagger-preview.nvim",
+    event = "VeryLazy",
+    build = "npm install -g swagger-ui-watcher",
+    config = function()
+      require("swagger-preview").setup {
+        port = 8003,
+        host = "localhost",
+      }
+    end,
   },
 }
