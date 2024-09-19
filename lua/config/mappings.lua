@@ -153,6 +153,12 @@ local maps = {
     ["<A-k>"] = { ":MoveBlock(-1)<CR>" },
     ["<A-h>"] = { ":MoveHBlock(-1)<CR>" },
     ["<A-l>"] = { ":MoveHBlock(1)<CR>" },
+
+    -- diff with clipboard
+    ["<Leader>c"] = {
+      function() require("config.commands.diff").compare_to_clipboard() end,
+      desc = "Diff with clipboard",
+    },
   },
   t = {
     -- setting a mapping to false will disable it
