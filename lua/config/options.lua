@@ -26,6 +26,7 @@ return {
       wrap = false, -- sets vim.opt.wrap
       autoread = true,
       guifont = { GuiFontName, ":h" .. GuiFontSize },
+      swapfile = false,
     },
     g = { -- vim.g.<key>
       -- configure global vim variables (vim.g)
