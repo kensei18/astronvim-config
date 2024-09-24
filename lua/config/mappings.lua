@@ -133,6 +133,24 @@ local maps = {
     ["<A-k>"] = { ":MoveLine(-1)<CR>" },
     ["<A-h>"] = { ":MoveHChar(-1)<CR>" },
     ["<A-l>"] = { ":MoveHChar(1)<CR>" },
+
+    -- goto-preview
+    ["gp"] = { name = "Goto Preview" },
+    ["gpd"] = { function() require("goto-preview").goto_preview_definition {} end, desc = "Goto Preview Definition" },
+    ["gpI"] = {
+      function() require("goto-preview").goto_preview_implementation {} end,
+      desc = "Goto Preview Implementation",
+    },
+    ["gpt"] = {
+      function() require("goto-preview").goto_preview_type_definition {} end,
+      desc = "Goto Preview Type Definition",
+    },
+    ["gpr"] = { function() require("goto-preview").goto_preview_references() end, desc = "Goto Preview References" },
+    ["gpD"] = {
+      function() require("goto-preview").goto_preview_declaration {} end,
+      desc = "Goto Preview Declaration",
+    },
+    ["gP"] = { function() require("goto-preview").close_all_win() end, desc = "Close all Goto Previews" },
   },
   x = {
     ["<Leader>g"] = { desc = require("astroui").get_icon("Git", 1, true) .. "Git" },

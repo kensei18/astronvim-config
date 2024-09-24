@@ -148,4 +148,15 @@ return {
     -- version = '^5.0.0', -- pin major version, include fixes and features that do not have breaking changes
     config = function() require("kitty-scrollback").setup() end,
   },
+  {
+    "rmagatti/goto-preview",
+    event = "BufEnter",
+    config = function()
+      require("goto-preview").setup {
+        width = 150,
+        height = 40,
+        resizing_mappings = true,
+      }
+    end, -- necessary as per https://github.com/rmagatti/goto-preview/issues/88
+  },
 }
