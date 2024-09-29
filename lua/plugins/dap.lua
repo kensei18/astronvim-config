@@ -17,6 +17,8 @@ return {
             name = "Remote Attach",
             request = "attach",
             mode = "remote",
+            port = 2345,
+            host = "0.0.0.0",
             substitutepath = {
               {
                 from = "${workspaceFolder}",
