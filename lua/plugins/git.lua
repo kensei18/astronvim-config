@@ -22,7 +22,7 @@ return {
       "nvim-telescope/telescope.nvim",
       "nvim-tree/nvim-web-devicons",
     },
-    event = "VeryLazy",
+    event = "User AstroGitFile",
     config = function()
       require("octo").setup {
         enable_builtin = true,
