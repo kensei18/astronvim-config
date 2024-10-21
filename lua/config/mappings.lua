@@ -87,6 +87,24 @@ local maps = {
     ["<Leader><Leader>mp"] = { ":MarkdownPreview<cr>", desc = "Markdown Preview" },
     ["<Leader><Leader>ms"] = { ":MarkdownPreviewStop<cr>", desc = "Stop Markdown Preview" },
 
+    -- diffview
+    ["<Leader><Leader>v"] = {
+      function()
+        if next(require("diffview.lib").views) == nil then
+          vim.ui.input({ prompt = "git-rev" }, function(input)
+            if input ~= nil and input ~= "" then
+              vim.cmd("DiffviewOpen " .. input)
+            else
+              vim.cmd "DiffviewOpen"
+            end
+          end)
+        else
+          vim.cmd "DiffviewClose"
+        end
+      end,
+      desc = "Diffview",
+    },
+
     -- Octo
     ["<Leader>gG"] = { ":Octo<cr>", desc = "Octo" },
     ["<Leader>gR"] = { require("config.commands.github").browse_repo, desc = "Open repo in browser" },

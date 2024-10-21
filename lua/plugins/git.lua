@@ -32,4 +32,10 @@ return {
       }
     end,
   },
+  {
+    "sindrets/diffview.nvim",
+    event = "VeryLazy",
+    cmd = { "DiffviewOpen" },
+    config = function() require("diffview").setup {} end,
+  },
 }
