@@ -22,6 +22,7 @@ return {
         "graphql",
         "terraformls",
         "tflint",
+        "bashls",
       })
     end,
   },
