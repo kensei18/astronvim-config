@@ -36,6 +36,12 @@ return {
     "sindrets/diffview.nvim",
     event = "VeryLazy",
     cmd = { "DiffviewOpen" },
-    config = function() require("diffview").setup {} end,
+    config = function()
+      require("diffview").setup {
+        default_args = {
+          DiffviewOpen = { "--imply-local" },
+        },
+      }
+    end,
   },
 }
