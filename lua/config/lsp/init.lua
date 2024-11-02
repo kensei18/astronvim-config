@@ -30,11 +30,13 @@ for _, file in ipairs(vim.fn.readdir(dir)) do
   end
 end
 
-local local_config = require "config.lsp._local"
--- Overwrite the default config with the local config
-for key, value in pairs(local_config) do
-  local merged = deepMerge(M[key], value)
-  M[key] = merged
+if vim.fn.filereadable(dir .. "/_local.lua") == 1 then
+  local local_config = require "config.lsp._local"
+  -- Overwrite the default config with the local config
+  for key, value in pairs(local_config) do
+    local merged = deepMerge(M[key], value)
+    M[key] = merged
+  end
 end
 
 return M
