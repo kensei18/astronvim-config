@@ -106,7 +106,7 @@ local maps = {
     },
 
     -- Octo
-    ["<Leader>gG"] = { ":Octo<cr>", desc = "Octo" },
+    ["<Leader><Leader>g"] = { ":Octo<cr>", desc = "Octo" },
     ["<Leader>gR"] = { require("config.commands.github").browse_repo, desc = "Open repo in browser" },
 
     -- open-browser-github
