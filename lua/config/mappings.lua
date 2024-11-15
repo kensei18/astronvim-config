@@ -169,6 +169,9 @@ local maps = {
       desc = "Goto Preview Declaration",
     },
     ["gP"] = { function() require("goto-preview").close_all_win() end, desc = "Close all Goto Previews" },
+
+    -- minimap
+    ["<Leader>um"] = { function() require("codewindow").toggle_minimap() end, desc = "Toggle minimap" },
   },
   x = {
     ["<Leader>g"] = { desc = require("astroui").get_icon("Git", 1, true) .. "Git" },

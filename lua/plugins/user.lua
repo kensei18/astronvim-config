@@ -159,4 +159,9 @@ return {
       }
     end, -- necessary as per https://github.com/rmagatti/goto-preview/issues/88
   },
+  {
+    "gorbit99/codewindow.nvim",
+    event = "BufEnter",
+    config = function() require("codewindow").setup() end,
+  },
 }
