@@ -87,10 +87,10 @@ return {
     "nvim-neo-tree/neo-tree.nvim",
     opts = {
       default_component_configs = {
-        file_size = { enabled = true },
-        type = { enabled = true },
-        last_modified = { enabled = true },
-        created = { enabled = true },
+        file_size = { enabled = false },
+        type = { enabled = false },
+        last_modified = { enabled = false },
+        created = { enabled = false },
       },
       filesystem = {
         window = {
