@@ -29,6 +29,15 @@ return {
         suppress_missing_scope = {
           projects_v2 = true,
         },
+        mappings = {
+          review_thread = {
+            delete_comment = { lhs = "<Leader><Leader>cd", desc = "delete comment" },
+          },
+          review_diff = {
+            add_review_comment = { lhs = "<Leader><Leader>ca", desc = "add a new review comment" },
+            add_review_suggestion = { lhs = "<Leader><Leader>cs", desc = "add a new review suggestion" },
+          },
+        },
       }
     end,
   },
