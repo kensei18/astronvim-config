@@ -196,7 +196,7 @@ local maps = {
     -- diff with clipboard
     ["<Leader>c"] = {
       function() require("config.commands.diff").compare_to_clipboard() end,
-      desc = "Diff with clipboard",
+      desc = "Diff from clipboard",
     },
   },
   t = {
