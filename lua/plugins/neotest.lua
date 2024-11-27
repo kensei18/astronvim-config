@@ -6,7 +6,6 @@ return {
       "nvim-lua/plenary.nvim",
       "nvim-treesitter/nvim-treesitter",
       "antoinemadec/FixCursorHold.nvim",
-      -- "nvim-neotest/neotest-go",
       "fredrikaverpil/neotest-golang",
       "nvim-neotest/neotest-jest",
     },
@@ -23,8 +22,15 @@ return {
       }, neotest_ns)
       require("neotest").setup {
         adapters = {
-          -- require "neotest-go",
-          require "neotest-golang",
+          require "neotest-golang" {
+            go_test_args = { "-count=1", "-tags=integration,e2e" },
+            go_list_args = { "-tags=integration,e2e" },
+            dap_go_opts = {
+              delve = {
+                build_flags = { "-tags=integration,e2e" },
+              },
+            },
+          },
           require "neotest-jest" {},
         },
       }
