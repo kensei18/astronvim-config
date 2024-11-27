@@ -235,32 +235,6 @@ local aiMaps = {
   ["<Leader>ag"] = { ":CopilotChat<cr>", desc = "Github Copilot Chat" },
 }
 
-if vim.env.OPENAI_API_KEY ~= "" then
-  local additionalAiMap = {
-    ["<Leader>aa"] = { ":ChatGPT<cr>", desc = "Chat" },
-    ["<Leader>ac"] = { ":ChatGPTCompleteCode<cr>", desc = "Complete Code" },
-    ["<Leader>ae"] = { ":ChatGPTEditWithInstructions<cr>", desc = "Edit with Instructions" },
-    ["<Leader>at"] = { ":ChatGPTActAs<cr>", desc = "Act as" },
-
-    ["<Leader>ar"] = { name = "Run" },
-    ["<Leader>ara"] = { ":ChatGPTRun add_tests<CR>", desc = "Add Tests" },
-    ["<Leader>ard"] = { ":ChatGPTRun docstring<CR>", desc = "Docstring" },
-    ["<Leader>are"] = { ":ChatGPTRun explain_code<CR>", desc = "Explain Code" },
-    ["<Leader>arf"] = { ":ChatGPTRun fix_bugs<CR>", desc = "Fix Bugs" },
-    ["<Leader>arg"] = { ":ChatGPTRun grammar_correction<CR>", desc = "Grammar Correction" },
-    ["<Leader>ark"] = { ":ChatGPTRun keywords<CR>", desc = "Keywords" },
-    ["<Leader>arl"] = { ":ChatGPTRun code_readability_analysis<CR>", desc = "Code Readability Analysis" },
-    ["<Leader>aro"] = { ":ChatGPTRun optimize_code<CR>", desc = "Optimize Code" },
-    ["<Leader>arr"] = { ":ChatGPTRun roxygen_edit<CR>", desc = "Roxygen Edit" },
-    ["<Leader>ars"] = { ":ChatGPTRun summarize<CR>", desc = "Summarize" },
-    ["<Leader>art"] = { ":ChatGPTRun translate<CR>", desc = "Translate" },
-  }
-
-  for k, v in pairs(additionalAiMap) do
-    aiMaps[k] = v
-  end
-end
-
 for k, v in pairs(aiMaps) do
   maps.n[k] = v
   maps.x[k] = v
