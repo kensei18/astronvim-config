@@ -164,4 +164,9 @@ return {
     event = "BufEnter",
     config = function() require("codewindow").setup() end,
   },
+  {
+    "rest-nvim/rest.nvim",
+    event = "VeryLazy",
+    config = function() require("rest-nvim").setup {} end,
+  },
 }
