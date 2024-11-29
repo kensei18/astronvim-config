@@ -223,7 +223,7 @@ if vim.fn.executable "lazygit" == 1 then
       require("astrocore").toggle_term_cmd {
         cmd = "lazygit",
         direction = "float",
-        on_close = function() require("gitsigns").refresh() end,
+        -- on_close = function() vim.api.nvim_command "bufdo edit" end,
       }
     end,
     desc = "ToggleTerm lazygit",
