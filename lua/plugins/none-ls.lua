@@ -31,7 +31,7 @@ return {
       }
 
       config.should_attach = function(bufnr)
-        local ft = vim.api.nvim_buf_get_option(bufnr, "filetype")
+        local ft = vim.api.nvim_get_option_value("filetype", { buf = bufnr })
         for _, source in ipairs(sources.get_all()) do
           if sources.is_available(source, ft) then
             if source.name == "prettierd" then
