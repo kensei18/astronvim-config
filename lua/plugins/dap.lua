@@ -1,3 +1,4 @@
+---@type LazySpec
 return {
   {
     "leoluz/nvim-dap-go",
