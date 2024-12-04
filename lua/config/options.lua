@@ -27,7 +27,6 @@ return {
       autoread = true,
       guifont = { GuiFontName, ":h" .. GuiFontSize },
       swapfile = false,
-      foldmethod = "diff",
     },
     g = { -- vim.g.<key>
       -- configure global vim variables (vim.g)
