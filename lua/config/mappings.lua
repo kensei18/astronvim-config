@@ -82,11 +82,6 @@ local maps = {
     ["<Leader><Leader>rb"] = { ":Refactor extract_block ", desc = "Extract block" },
     ["<Leader><Leader>rf"] = { ":Refactor extract_block_to_file ", desc = "Extract block to file" },
 
-    -- Markdown
-    ["<Leader><Leader>m"] = { desc = "Markdown" },
-    ["<Leader><Leader>mp"] = { ":MarkdownPreview<cr>", desc = "Markdown Preview" },
-    ["<Leader><Leader>ms"] = { ":MarkdownPreviewStop<cr>", desc = "Stop Markdown Preview" },
-
     -- diffview
     ["<Leader><Leader>v"] = {
       function()
