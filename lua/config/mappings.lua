@@ -227,7 +227,6 @@ end
 
 local aiMaps = {
   ["<Leader>a"] = { name = "AI" },
-  ["<Leader>ag"] = { ":CopilotChat<cr>", desc = "Github Copilot Chat" },
 }
 
 for k, v in pairs(aiMaps) do

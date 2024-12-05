@@ -33,21 +33,6 @@ return {
     end,
   },
   {
-    "CopilotC-Nvim/CopilotChat.nvim",
-    dependencies = {
-      { "zbirenbaum/copilot.lua" },
-      { "nvim-lua/plenary.nvim" },
-    },
-    build = "make tiktoken",
-    config = function()
-      require("CopilotChat").setup {
-        window = {
-          layout = "float",
-        },
-      }
-    end,
-  },
-  {
     "yetone/avante.nvim",
     event = "VeryLazy",
     lazy = false,
