@@ -23,6 +23,7 @@ return {
         "terraformls",
         "tflint",
         "bashls",
+        "sqls",
       })
     end,
   },

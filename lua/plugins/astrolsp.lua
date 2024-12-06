@@ -53,6 +53,11 @@ return {
       -- the key is the server that is being setup with `lspconfig`
       -- rust_analyzer = false, -- setting a handler to false will disable the set up of that language server
       -- pyright = function(_, opts) require("lspconfig").pyright.setup(opts) end -- or a custom handler function can be passed
+
+      sqls = function(_, opts)
+        opts.on_attach = function(client, bufnr) require("sqls").on_attach(client, bufnr) end
+        require("lspconfig").sqls.setup(opts)
+      end,
     },
     -- Configure buffer local auto commands to add when attaching a language server
     autocmds = {
