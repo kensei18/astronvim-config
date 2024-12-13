@@ -14,6 +14,7 @@ return {
         "lua_ls",
         "ts_ls",
         "gopls",
+        "golangci_lint_ls",
         "pyright",
         "jsonls",
         "yamlls",
