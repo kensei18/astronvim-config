@@ -43,6 +43,12 @@ return {
     end,
   },
   {
+    "petertriho/cmp-git",
+    dependencies = { "hrsh7th/nvim-cmp" },
+    init = function() table.insert(require("cmp").get_config().sources, { name = "git" }) end,
+    config = function() require("cmp_git").setup() end,
+  },
+  {
     "sindrets/diffview.nvim",
     event = "VeryLazy",
     cmd = { "DiffviewOpen" },
