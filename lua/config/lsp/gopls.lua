@@ -2,7 +2,8 @@ return {
   settings = {
     gopls = {
       staticcheck = true,
-      gofumpt = true,
+      gofumpt = false,
+      buildFlags = { "-tags=integration,wireinject" },
     },
   },
 }
