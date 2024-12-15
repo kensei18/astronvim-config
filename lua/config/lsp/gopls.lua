@@ -3,7 +3,7 @@ return {
     gopls = {
       staticcheck = true,
       gofumpt = false,
-      buildFlags = { "-tags=integration,wireinject" },
+      buildFlags = { "-tags=integration,e2e,wireinject,tools" },
     },
   },
 }
