@@ -167,7 +167,15 @@ return {
   },
   {
     "rest-nvim/rest.nvim",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "nvim-telescope/telescope.nvim",
+    },
     event = "VeryLazy",
-    config = function() require("rest-nvim").setup {} end,
+    config = function()
+      require("telescope").load_extension "rest"
+
+      vim.g.rest_nvim = {}
+    end,
   },
 }
