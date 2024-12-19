@@ -42,6 +42,13 @@ return {
               }, pathutils.get_buf_directory(bufnr))
             end
 
+            if source.name == "biome" then
+              return pathutils.has_files({
+                "biome.json",
+                "biome.jsonc",
+              }, pathutils.get_buf_directory(bufnr))
+            end
+
             return true
           end
         end
