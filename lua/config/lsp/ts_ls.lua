@@ -12,6 +12,9 @@ local commonSettings = {
     includeInlayVariableTypeHints = true,
     includeInlayVariableTypeHintsWhenTypeMatchesName = false,
   },
+  format = {
+    insertSpaceAfterOpeningAndBeforeClosingEmptyBraces = false,
+  },
 }
 
 return {
