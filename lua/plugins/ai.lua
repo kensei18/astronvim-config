@@ -37,7 +37,30 @@ return {
     event = "VeryLazy",
     lazy = false,
     version = false,
-    config = function() require("avante").setup {} end,
+    config = function()
+      require("avante").setup {
+        provider = "claude",
+        auto_suggestions_provider = "copilot",
+
+        behaviour = {
+          auto_suggestions = false,
+          auto_set_highlight_group = true,
+          auto_set_keymaps = true,
+          auto_apply_diff_after_generation = false,
+          support_paste_from_clipboard = false,
+          minimize_diff = true,
+        },
+
+        mappings = {
+          suggestion = {
+            accept = "<C-l>",
+            next = "<C-j>",
+            prev = "<C-k>",
+            dismiss = "<C-h>",
+          },
+        },
+      }
+    end,
     build = "make",
     dependencies = {
       "nvim-treesitter/nvim-treesitter",
