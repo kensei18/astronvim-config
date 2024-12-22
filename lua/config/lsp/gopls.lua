@@ -2,7 +2,7 @@ return {
   settings = {
     gopls = {
       staticcheck = true,
-      gofumpt = false,
+      gofumpt = true,
       buildFlags = { "-tags=integration,e2e,wireinject,tools" },
     },
   },
