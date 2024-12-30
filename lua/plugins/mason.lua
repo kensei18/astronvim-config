@@ -34,13 +34,35 @@ return {
     "jay-babu/mason-null-ls.nvim",
     -- overrides `require("mason-null-ls").setup(...)`
     opts = function(_, opts)
-      -- add more things to the ensure_installed table protecting against community packs modifying it
+      local null_ls = require "null-ls"
+
       opts.ensure_installed = require("astrocore").list_insert_unique(opts.ensure_installed, {
         "prettierd",
         "stylua",
         "goimports",
         "cspell",
       })
+
+      opts.handlers = {
+        prettierd = function(source_name, methods)
+          null_ls.builtins.formatting.prettierd.with {
+            condition = function(utils)
+              return utils.root_has_file ".prettierrc"
+                or utils.root_has_file ".prettierrc.json"
+                or utils.root_has_file ".prettierrc.yaml"
+                or utils.root_has_file ".prettierrc.yml"
+                or utils.root_has_file ".prettierrc.js"
+                or utils.root_has_file ".prettierrc.cjs"
+                or utils.root_has_file "prettier.config.js"
+            end,
+          }
+        end,
+        biome = function(source_name, methods)
+          null_ls.builtins.formatting.biome.with {
+            condition = function(utils) return utils.root_has_file "biome.json" or utils.root_has_file "biome.jsonc" end,
+          }
+        end,
+      }
     end,
   },
   {
