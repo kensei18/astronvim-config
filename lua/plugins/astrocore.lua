@@ -6,7 +6,7 @@
 --       as this provides autocomplete and documentation while editing
 
 GuiFontName = "JetBrainsMono Nerd Font"
-GuiFontSize = 10
+GuiFontSize = 9.5
 
 ---@type LazySpec
 return {

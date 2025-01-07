@@ -15,10 +15,21 @@ vim.filetype.add {
   },
 }
 
-vim.api.nvim_set_keymap("", "<D-v>", "+p<CR>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("!", "<D-v>", "<C-R>+", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("t", "<S-Esc>", "<C-\\><C-n>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("v", "<D-v>", "<C-R>+", { noremap = true, silent = true })
+if vim.g.neovide then
+  vim.g.neovide_input_use_logo = true
+
+  vim.api.nvim_set_keymap("n", "<D-v>", "+p<CR>", { noremap = true, silent = true })
+  -- vim.api.nvim_set_keymap("!", "<D-v>", "<C-R>+", { noremap = true, silent = true })
+
+  vim.api.nvim_set_keymap("i", "<D-v>", '<ESC>"+pa', { noremap = true, silent = true })
+  vim.api.nvim_set_keymap("c", "<D-v>", "<C-r>+", { noremap = true })
+  vim.api.nvim_set_keymap("v", "<D-v>", '"+P', { noremap = true, silent = true })
+  vim.api.nvim_set_keymap("t", "<D-v>", '<C-\\><C-n>"+Pi', { noremap = true, silent = true })
+
+  vim.api.nvim_set_keymap("t", "<S-Esc>", "<C-\\><C-n>", { noremap = true, silent = true })
+
+  vim.api.nvim_set_keymap("n", "<D-n>", ':silent execute "!neovide"<CR>', { noremap = true, silent = true })
+end
 
 -- for autoread
 vim.api.nvim_create_autocmd({ "BufEnter", "CursorHold", "CursorHoldI", "FocusGained" }, {

@@ -30,17 +30,24 @@ local maps = {
     -- sessions
     ["<Leader>r"] = { function() require("resession").load(nil, { dir = "dirsession" }) end, desc = "Load a session" },
 
-    -- font size
+    -- GUI font size
     ["<Leader>+"] = {
       function()
-        GuiFontName = GuiFontName + 1
+        GuiFontSize = GuiFontSize + 0.5
+        vim.opt.guifont = { GuiFontName, ":h" .. GuiFontSize }
+      end,
+      desc = "Increment Font Size",
+    },
+    ["<Leader>="] = {
+      function()
+        GuiFontSize = GuiFontSize + 0.5
         vim.opt.guifont = { GuiFontName, ":h" .. GuiFontSize }
       end,
       desc = "Increment Font Size",
     },
     ["<Leader>-"] = {
       function()
-        GuiFontSize = GuiFontSize - 1
+        GuiFontSize = GuiFontSize - 0.5
         vim.opt.guifont = { GuiFontName, ":h" .. GuiFontSize }
       end,
       desc = "Decrement Font Size",
