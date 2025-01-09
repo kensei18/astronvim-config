@@ -1,6 +1,13 @@
 ---@type LazySpec
 return {
   {
+    "nvim-telescope/telescope.nvim",
+    opts = function(_, opts)
+      opts.defaults.mappings.i["<D-v>"] = { "<C-r>+", type = "command" }
+      return opts
+    end,
+  },
+  {
     "akinsho/toggleterm.nvim",
     opts = {
       direction = "float",
