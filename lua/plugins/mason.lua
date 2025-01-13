@@ -1,5 +1,3 @@
--- if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
-
 -- Customize Mason plugins
 
 ---@type LazySpec
@@ -35,6 +33,7 @@ return {
     -- overrides `require("mason-null-ls").setup(...)`
     opts = function(_, opts)
       local null_ls = require "null-ls"
+      local path_utils = require "utils.path"
 
       opts.ensure_installed = require("astrocore").list_insert_unique(opts.ensure_installed, {
         "prettierd",
@@ -45,22 +44,29 @@ return {
 
       opts.handlers = {
         prettierd = function(source_name, methods)
-          null_ls.builtins.formatting.prettierd.with {
+          null_ls.register(null_ls.builtins.formatting.prettierd.with {
             condition = function(utils)
-              return utils.root_has_file ".prettierrc"
-                or utils.root_has_file ".prettierrc.json"
-                or utils.root_has_file ".prettierrc.yaml"
-                or utils.root_has_file ".prettierrc.yml"
-                or utils.root_has_file ".prettierrc.js"
-                or utils.root_has_file ".prettierrc.cjs"
-                or utils.root_has_file "prettier.config.js"
+              return path_utils.has_files({
+                ".prettierrc",
+                ".prettierrc.json",
+                ".prettierrc.yaml",
+                ".prettierrc.yml",
+                ".prettierrc.js",
+                ".prettierrc.cjs",
+                "prettier.config.js",
+              }, vim.fn.getcwd())
             end,
-          }
+          })
         end,
         biome = function(source_name, methods)
-          null_ls.builtins.formatting.biome.with {
-            condition = function(utils) return utils.root_has_file "biome.json" or utils.root_has_file "biome.jsonc" end,
-          }
+          null_ls.register(null_ls.builtins.formatting.biome.with {
+            condition = function(utils)
+              return path_utils.has_files({
+                "biome.json",
+                "biome.jsonc",
+              }, vim.fn.getcwd())
+            end,
+          })
         end,
       }
     end,

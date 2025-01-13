@@ -17,7 +17,6 @@ return {
       config.sources = {
         -- Set a formatter
         -- null_ls.builtins.formatting.stylua,
-        null_ls.builtins.formatting.prettierd,
         cspell.diagnostics.with {
           diagnostics_postprocess = function(diagnostic) diagnostic.severity = vim.diagnostic.severity["INFO"] end,
           extra_args = { "--config", "~/.config/cspell/cspell.yaml" },
