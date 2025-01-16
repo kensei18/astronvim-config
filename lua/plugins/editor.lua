@@ -123,4 +123,13 @@ return {
     event = "BufEnter",
     config = function() require("codewindow").setup() end,
   },
+  {
+    "nvimdev/lspsaga.nvim",
+    dependencies = {
+      "nvim-treesitter/nvim-treesitter", -- optional
+      "nvim-tree/nvim-web-devicons", -- optional
+    },
+    event = "BufEnter",
+    config = function() require("lspsaga").setup {} end,
+  },
 }
