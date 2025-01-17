@@ -12,8 +12,8 @@ return {
     "lukas-reineke/indent-blankline.nvim",
     config = function()
       local highlight = {
-        "RainbowRed",
         "RainbowYellow",
+        "RainbowRed",
         "RainbowBlue",
         "RainbowOrange",
         "RainbowGreen",
@@ -22,8 +22,8 @@ return {
       }
       local hooks = require "ibl.hooks"
       hooks.register(hooks.type.HIGHLIGHT_SETUP, function()
-        vim.api.nvim_set_hl(0, "RainbowRed", { fg = "#E06C75" })
         vim.api.nvim_set_hl(0, "RainbowYellow", { fg = "#E5C07B" })
+        vim.api.nvim_set_hl(0, "RainbowRed", { fg = "#E06C75" })
         vim.api.nvim_set_hl(0, "RainbowBlue", { fg = "#61AFEF" })
         vim.api.nvim_set_hl(0, "RainbowOrange", { fg = "#D19A66" })
         vim.api.nvim_set_hl(0, "RainbowGreen", { fg = "#98C379" })
@@ -33,7 +33,12 @@ return {
 
       vim.g.rainbow_delimiters = { highlight = highlight }
       require("ibl").setup {
-        scope = { enabled = true, highlight = highlight },
+        scope = {
+          enabled = true,
+          highlight = highlight,
+          show_start = false,
+          show_end = false,
+        },
       }
       hooks.register(hooks.type.SCOPE_HIGHLIGHT, hooks.builtin.scope_highlight_from_extmark)
     end,
