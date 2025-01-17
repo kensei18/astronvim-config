@@ -130,6 +130,15 @@ return {
       "nvim-tree/nvim-web-devicons", -- optional
     },
     event = "BufEnter",
-    config = function() require("lspsaga").setup {} end,
+    config = function()
+      require("lspsaga").setup {
+        lightbulb = {
+          enabled = false,
+          sign = false,
+          virtual_text = false,
+          enable_in_insert = false,
+        },
+      }
+    end,
   },
 }
