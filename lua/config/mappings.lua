@@ -156,6 +156,7 @@ local maps = {
 
     -- goto-preview
     ["gp"] = { name = "Goto Preview" },
+    ["gD"] = { function() require("goto-preview").goto_preview_definition {} end, desc = "Goto Preview Definition" },
     ["gpd"] = { function() require("goto-preview").goto_preview_definition {} end, desc = "Goto Preview Definition" },
     ["gpI"] = {
       function() require("goto-preview").goto_preview_implementation {} end,
