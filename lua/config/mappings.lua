@@ -195,6 +195,11 @@ local maps = {
     ["<A-k>"] = { ":MoveBlock(-1)<CR>" },
     ["<A-h>"] = { ":MoveHBlock(-1)<CR>" },
     ["<A-l>"] = { ":MoveHBlock(1)<CR>" },
+    -- for neovide
+    ["<C-S-j>"] = { ":MoveLine(1)<CR>" },
+    ["<C-S-k>"] = { ":MoveLine(-1)<CR>" },
+    ["<C-S-h>"] = { ":MoveHChar(-1)<CR>" },
+    ["<C-S-l>"] = { ":MoveHChar(1)<CR>" },
 
     -- diff with clipboard
     ["<Leader>c"] = {
