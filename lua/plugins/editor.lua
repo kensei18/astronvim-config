@@ -112,17 +112,17 @@ return {
     event = "VeryLazy",
     config = function() require("move").setup {} end,
   },
-  {
-    "rmagatti/goto-preview",
-    event = "BufEnter",
-    config = function()
-      require("goto-preview").setup {
-        width = 150,
-        height = 40,
-        resizing_mappings = true,
-      }
-    end, -- necessary as per https://github.com/rmagatti/goto-preview/issues/88
-  },
+  -- {
+  --   "rmagatti/goto-preview",
+  --   event = "BufEnter",
+  --   config = function()
+  --     require("goto-preview").setup {
+  --       width = 150,
+  --       height = 40,
+  --       resizing_mappings = true,
+  --     }
+  --   end, -- necessary as per https://github.com/rmagatti/goto-preview/issues/88
+  -- },
   {
     "gorbit99/codewindow.nvim",
     event = "BufEnter",
@@ -137,6 +137,12 @@ return {
     event = "BufEnter",
     config = function()
       require("lspsaga").setup {
+        symbol_in_winbar = {
+          hide_keyword = true,
+        },
+        outline = {
+          win_width = 40,
+        },
         lightbulb = {
           enabled = false,
           sign = false,

@@ -17,7 +17,7 @@ local maps = {
     ["<Leader>Q"] = { ":qa<cr>", desc = "Quit all" },
 
     -- telescope
-    ["gr"] = { function() require("telescope.builtin").lsp_references() end, desc = "LSP References" },
+    -- ["gr"] = { function() require("telescope.builtin").lsp_references() end, desc = "LSP References" },
     ["<Leader>lD"] = {
       function() require("telescope.builtin").diagnostics { severity_limit = vim.diagnostic.severity.WARN } end,
       desc = "Search Diagnostics",
@@ -159,24 +159,19 @@ local maps = {
     ["<C-S-h>"] = { ":MoveHChar(-1)<CR>" },
     ["<C-S-l>"] = { ":MoveHChar(1)<CR>" },
 
-    -- goto-preview
-    ["gp"] = { name = "Goto Preview" },
-    ["gD"] = { function() require("goto-preview").goto_preview_definition {} end, desc = "Goto Preview Definition" },
-    ["gpd"] = { function() require("goto-preview").goto_preview_definition {} end, desc = "Goto Preview Definition" },
-    ["gpI"] = {
-      function() require("goto-preview").goto_preview_implementation {} end,
-      desc = "Goto Preview Implementation",
-    },
-    ["gpt"] = {
-      function() require("goto-preview").goto_preview_type_definition {} end,
-      desc = "Goto Preview Type Definition",
-    },
-    ["gpr"] = { function() require("goto-preview").goto_preview_references() end, desc = "Goto Preview References" },
-    ["gpD"] = {
-      function() require("goto-preview").goto_preview_declaration {} end,
-      desc = "Goto Preview Declaration",
-    },
-    ["gP"] = { function() require("goto-preview").close_all_win() end, desc = "Close all Goto Previews" },
+    -- goto-preview / lspsaga
+    -- ["gp"] = { name = "Goto Preview" },
+    ["gd"] = { ":Lspsaga goto_definition<CR>", desc = "Goto Definition" },
+    ["gD"] = { ":Lspsaga peek_definition<CR>", desc = "Definition Preview" },
+    ["gr"] = { ":Lspsaga finder ref<CR>", desc = "References Preview" },
+    ["gI"] = { ":Lspsaga finder imp<CR>", desc = "Implementation Preview" },
+    ["<Leader>lS"] = { ":Lspsaga outline<CR>", desc = "Symbols outline" },
+    -- ["gpt"] = { ":Lspsaga peek_type_definition<CR>", desc = "Goto Preview Type Definition" },
+    -- ["gpD"] = {
+    --   function() require("goto-preview").goto_preview_declaration {} end,
+    --   desc = "Goto Preview Declaration",
+    -- },
+    -- ["gP"] = { function() require("goto-preview").close_all_win() end, desc = "Close all Goto Previews" },
 
     -- minimap
     ["<Leader>um"] = { function() require("codewindow").toggle_minimap() end, desc = "Toggle minimap" },
