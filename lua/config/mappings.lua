@@ -153,6 +153,11 @@ local maps = {
     ["<A-k>"] = { ":MoveLine(-1)<CR>" },
     ["<A-h>"] = { ":MoveHChar(-1)<CR>" },
     ["<A-l>"] = { ":MoveHChar(1)<CR>" },
+    -- for neovide
+    ["<C-S-j>"] = { ":MoveLine(1)<CR>" },
+    ["<C-S-k>"] = { ":MoveLine(-1)<CR>" },
+    ["<C-S-h>"] = { ":MoveHChar(-1)<CR>" },
+    ["<C-S-l>"] = { ":MoveHChar(1)<CR>" },
 
     -- goto-preview
     ["gp"] = { name = "Goto Preview" },
