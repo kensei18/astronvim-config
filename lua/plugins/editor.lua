@@ -143,6 +143,13 @@ return {
         outline = {
           win_width = 40,
         },
+        definition = {
+          width = 0.8,
+        },
+        finder = {
+          max_height = 0.6,
+          left_width = 0.7,
+        },
         lightbulb = {
           enabled = false,
           sign = false,

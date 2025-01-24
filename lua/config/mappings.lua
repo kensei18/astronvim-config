@@ -164,7 +164,6 @@ local maps = {
     ["gd"] = { ":Lspsaga goto_definition<CR>", desc = "Goto Definition" },
     ["gD"] = { ":Lspsaga peek_definition<CR>", desc = "Definition Preview" },
     ["gr"] = { ":Lspsaga finder ref<CR>", desc = "References Preview" },
-    ["gI"] = { ":Lspsaga finder imp<CR>", desc = "Implementation Preview" },
     ["<Leader>lS"] = { ":Lspsaga outline<CR>", desc = "Symbols outline" },
     -- ["gpt"] = { ":Lspsaga peek_type_definition<CR>", desc = "Goto Preview Type Definition" },
     -- ["gpD"] = {
