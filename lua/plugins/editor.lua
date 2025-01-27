@@ -142,13 +142,14 @@ return {
         },
         outline = {
           win_width = 40,
+          layout = "float",
         },
         definition = {
           width = 0.8,
         },
         finder = {
           max_height = 0.6,
-          left_width = 0.7,
+          left_width = 0.3,
         },
         lightbulb = {
           enabled = false,
