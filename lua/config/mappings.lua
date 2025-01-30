@@ -17,7 +17,7 @@ local maps = {
     ["<Leader>Q"] = { ":qa<cr>", desc = "Quit all" },
 
     -- telescope
-    -- ["gr"] = { function() require("telescope.builtin").lsp_references() end, desc = "LSP References" },
+    ["gr"] = { function() require("telescope.builtin").lsp_references() end, desc = "LSP References" },
     ["<Leader>lD"] = {
       function() require("telescope.builtin").diagnostics { severity_limit = vim.diagnostic.severity.WARN } end,
       desc = "Search Diagnostics",
@@ -163,7 +163,7 @@ local maps = {
     -- ["gp"] = { name = "Goto Preview" },
     ["gd"] = { ":Lspsaga goto_definition<CR>", desc = "Goto Definition" },
     ["gD"] = { ":Lspsaga peek_definition<CR>", desc = "Definition Preview" },
-    ["gr"] = { ":Lspsaga finder ref<CR>", desc = "References Preview" },
+    ["gR"] = { ":Lspsaga finder ref<CR>", desc = "References Preview" },
     ["<Leader>lS"] = { ":Lspsaga outline<CR>", desc = "Symbols outline" },
     -- ["gpt"] = { ":Lspsaga peek_type_definition<CR>", desc = "Goto Preview Type Definition" },
     -- ["gpD"] = {

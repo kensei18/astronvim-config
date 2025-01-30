@@ -149,7 +149,7 @@ return {
         },
         finder = {
           max_height = 0.6,
-          left_width = 0.3,
+          left_width = 0.2,
         },
         lightbulb = {
           enabled = false,
