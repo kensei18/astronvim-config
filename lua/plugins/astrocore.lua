@@ -5,8 +5,8 @@
 -- NOTE: We highly recommend setting up the Lua Language Server (`:LspInstall lua_ls`)
 --       as this provides autocomplete and documentation while editing
 
-GuiFontName = "JetBrainsMono Nerd Font"
-GuiFontSize = 9.5
+GuiFontName = "RecMonoCasual Nerd Font"
+GuiFontSize = 10
 
 ---@type LazySpec
 return {

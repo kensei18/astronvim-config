@@ -33,21 +33,21 @@ local maps = {
     -- GUI font size
     ["<Leader>+"] = {
       function()
-        GuiFontSize = GuiFontSize + 0.5
+        GuiFontSize = GuiFontSize + 1
         vim.opt.guifont = { GuiFontName, ":h" .. GuiFontSize }
       end,
       desc = "Increment Font Size",
     },
     ["<Leader>="] = {
       function()
-        GuiFontSize = GuiFontSize + 0.5
+        GuiFontSize = GuiFontSize + 1
         vim.opt.guifont = { GuiFontName, ":h" .. GuiFontSize }
       end,
       desc = "Increment Font Size",
     },
     ["<Leader>-"] = {
       function()
-        GuiFontSize = GuiFontSize - 0.5
+        GuiFontSize = GuiFontSize - 1
         vim.opt.guifont = { GuiFontName, ":h" .. GuiFontSize }
       end,
       desc = "Decrement Font Size",
