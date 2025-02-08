@@ -143,10 +143,6 @@ return {
         symbol_in_winbar = {
           hide_keyword = true,
         },
-        outline = {
-          win_width = 40,
-          layout = "float",
-        },
         definition = {
           width = 0.8,
         },
