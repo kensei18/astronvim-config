@@ -9,6 +9,7 @@ return {
       "antoinemadec/FixCursorHold.nvim",
       "fredrikaverpil/neotest-golang",
       "nvim-neotest/neotest-jest",
+      "thenbe/neotest-playwright",
     },
     event = "VeryLazy",
     config = function()
@@ -33,6 +34,12 @@ return {
             },
           },
           require "neotest-jest" {},
+          require("neotest-playwright").adapter {
+            options = {
+              persist_project_selection = true,
+              enable_dynamic_test_discovery = true,
+            },
+          },
         },
       }
     end,
