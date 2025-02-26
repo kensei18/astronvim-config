@@ -41,7 +41,7 @@ return {
       require("avante").setup {
         provider = "claude",
         auto_suggestions_provider = "claude",
-        cursor_applying_provider = "fastapply",
+        -- cursor_applying_provider = "fastapply",
 
         behaviour = {
           auto_suggestions = false,
@@ -50,17 +50,17 @@ return {
           auto_apply_diff_after_generation = false,
           support_paste_from_clipboard = false,
           minimize_diff = true,
-          enable_cursor_planning_mode = true,
+          -- enable_cursor_planning_mode = true,
         },
 
-        vendors = {
-          fastapply = {
-            __inherited_from = "openai",
-            api_key_name = "",
-            endpoint = "http://localhost:11434/v1",
-            model = "hf.co/Kortix/FastApply-7B-v1.0_GGUF:Q4_K_M",
-          },
-        },
+        -- vendors = {
+        --   fastapply = {
+        --     __inherited_from = "openai",
+        --     api_key_name = "",
+        --     endpoint = "http://localhost:11434/v1",
+        --     model = "hf.co/Kortix/FastApply-7B-v1.0_GGUF:Q4_K_M",
+        --   },
+        -- },
 
         mappings = {
           suggestion = {
