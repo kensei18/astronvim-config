@@ -28,7 +28,7 @@ return {
             dismiss = "<C-h>",
           },
         },
-        filetypes = { yaml = true },
+        filetypes = { yaml = true, markdown = true },
       }
     end,
   },
