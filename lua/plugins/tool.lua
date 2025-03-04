@@ -80,9 +80,17 @@ return {
     "gelguy/wilder.nvim",
     event = "VeryLazy",
     config = function()
-      require("wilder").setup {
+      local wilder = require "wilder"
+
+      wilder.setup {
         modes = { ":", "/", "?" },
       }
+
+      wilder.set_option("pipeline", {
+        wilder.branch(wilder.cmdline_pipeline {
+          fuzzy = 1,
+        }),
+      })
     end,
   },
 }
