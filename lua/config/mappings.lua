@@ -23,6 +23,9 @@ local maps = {
       desc = "Search Diagnostics",
     },
 
+    -- oil
+    ["<Leader>e"] = { ":Oil<cr>", desc = "Oil file explorer" },
+
     -- buffer
     ["<Leader>bt"] = { "<cmd>tabnew<cr>", desc = "New tab" },
     ["<Leader>bb"] = { ":Telescope buffers<cr>", desc = "Find buffers" },

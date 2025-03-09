@@ -139,4 +139,15 @@ return {
       })
     end,
   },
+  {
+    "stevearc/oil.nvim",
+    ---@module 'oil'
+    ---@type oil.SetupOpts
+    dependencies = {
+      "echasnovski/mini.icons",
+      "nvim-tree/nvim-web-devicons",
+    },
+    lazy = false,
+    config = function(self, opts) require("oil").setup() end,
+  },
 }
