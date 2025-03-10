@@ -24,7 +24,7 @@ local maps = {
     },
 
     -- oil
-    ["<Leader>e"] = { ":Oil<cr>", desc = "Oil file explorer" },
+    ["<Leader>o"] = { ":Oil<cr>", desc = "Oil file explorer" },
 
     -- buffer
     ["<Leader>bt"] = { "<cmd>tabnew<cr>", desc = "New tab" },
