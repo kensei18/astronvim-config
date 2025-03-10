@@ -158,9 +158,6 @@ return {
           max_height = 0.6,
           left_width = 0.2,
         },
-        outline = {
-          win_position = "left",
-        },
         lightbulb = {
           enabled = false,
           sign = false,
