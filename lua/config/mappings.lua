@@ -174,6 +174,14 @@ local maps = {
 
     -- minimap
     ["<Leader>um"] = { function() require("codewindow").toggle_minimap() end, desc = "Toggle minimap" },
+
+    -- no neck pain
+    ["<Leader>n"] = { desc = "No neck pain" },
+    ["<Leader>nn"] = { ":NoNeckPain<cr>", desc = "Toggle" },
+    ["<Leader>nr"] = { ":NoNeckPainToggleRightSide<cr>", desc = "Toggle Right Side" },
+    ["<Leader>nl"] = { ":NoNeckPainToggleLeftSide<cr>", desc = "Toggle Left Side" },
+    ["<Leader>nu"] = { ":NoNeckPainWidthUp<cr>", desc = "Increase the width" },
+    ["<Leader>nd"] = { ":NoNeckPainWidthDown<cr>", desc = "Decrease the width" },
   },
   x = {
     ["<Leader>g"] = { desc = require("astroui").get_icon("Git", 1, true) .. "Git" },
