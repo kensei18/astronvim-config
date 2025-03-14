@@ -171,7 +171,7 @@ return {
     "shortcuts/no-neck-pain.nvim",
     version = "*",
     opts = {
-      width = 140,
+      width = 160,
     },
   },
 }
