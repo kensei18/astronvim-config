@@ -153,4 +153,14 @@ return {
     lazy = false,
     config = function(self, opts) require("oil").setup() end,
   },
+  {
+    "j-morano/buffer_manager.nvim",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+    },
+    opts = {
+      width = 120,
+      height = 60,
+    },
+  },
 }
