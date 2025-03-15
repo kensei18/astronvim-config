@@ -28,8 +28,7 @@ local maps = {
 
     -- buffer
     ["<Leader>bt"] = { "<cmd>tabnew<cr>", desc = "New tab" },
-    -- ["<Leader>bb"] = { ":Telescope buffers<cr>", desc = "Find buffers" },
-    ["<Leader>h"] = { ":Telescope buffers<cr>", desc = "Find buffers" },
+    ["<Leader><Leader>f"] = { ":Telescope buffers<cr>", desc = "Find buffers" },
 
     -- sessions
     ["<Leader>r"] = { function() require("resession").load(nil, { dir = "dirsession" }) end, desc = "Load a session" },
