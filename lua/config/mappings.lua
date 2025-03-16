@@ -153,11 +153,6 @@ local maps = {
     },
 
     -- move
-    ["<A-j>"] = { ":MoveLine(1)<CR>" },
-    ["<A-k>"] = { ":MoveLine(-1)<CR>" },
-    ["<A-h>"] = { ":MoveHChar(-1)<CR>" },
-    ["<A-l>"] = { ":MoveHChar(1)<CR>" },
-    -- for neovide
     ["<C-S-j>"] = { ":MoveLine(1)<CR>" },
     ["<C-S-k>"] = { ":MoveLine(-1)<CR>" },
     ["<C-S-h>"] = { ":MoveHChar(-1)<CR>" },
@@ -202,15 +197,10 @@ local maps = {
     ["<Leader>go"] = { ":OpenGithubFile<cr><cr>", desc = "Open in Github" },
 
     -- move
-    ["<A-j>"] = { ":MoveBlock(1)<CR>" },
-    ["<A-k>"] = { ":MoveBlock(-1)<CR>" },
-    ["<A-h>"] = { ":MoveHBlock(-1)<CR>" },
-    ["<A-l>"] = { ":MoveHBlock(1)<CR>" },
-    -- for neovide
-    ["<C-S-j>"] = { ":MoveLine(1)<CR>" },
-    ["<C-S-k>"] = { ":MoveLine(-1)<CR>" },
-    ["<C-S-h>"] = { ":MoveHChar(-1)<CR>" },
-    ["<C-S-l>"] = { ":MoveHChar(1)<CR>" },
+    ["<C-S-j>"] = { ":MoveBlock(1)<CR>" },
+    ["<C-S-k>"] = { ":MoveBlock(-1)<CR>" },
+    ["<C-S-h>"] = { ":MoveHBlock(-1)<CR>" },
+    ["<C-S-l>"] = { ":MoveHBlock(1)<CR>" },
 
     -- diff with clipboard
     ["<Leader>c"] = {
