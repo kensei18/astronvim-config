@@ -28,7 +28,8 @@ local maps = {
 
     -- buffer
     ["<Leader>bt"] = { "<cmd>tabnew<cr>", desc = "New tab" },
-    ["<Leader>bb"] = { ":Telescope buffers<cr>", desc = "Find buffers" },
+    -- ["<Leader>bb"] = { ":Telescope buffers<cr>", desc = "Find buffers" },
+    ["<Leader>s"] = { ":Telescope buffers<cr>", desc = "Find buffers" },
     ["<Leader><Leader>f"] = {
       function() require("buffer_manager.ui").toggle_quick_menu() end,
       desc = "Manage buffers",
